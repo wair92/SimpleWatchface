@@ -89,7 +89,7 @@
         <settingConfig type="list">
                
             <listEntry value="100">@Strings.Yes</listEntry> 
-            <listEntry value="0">@Strings.No</listEntry>
+            <listEntry value="1">@Strings.No</listEntry>
             <listEntry value="50">@Strings.LessThan50</listEntry>
             <listEntry value="25">@Strings.LessThan25</listEntry>                       
 			
