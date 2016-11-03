@@ -1,0 +1,10 @@
+<resources>
+    <string id="steps">krokov</string>
+    <string id="Monday">Pondelok</string>
+    <string id="Tuesday">Utorok</string>
+    <string id="Wednesday">Streda</string>
+    <string id="Thursday">Stvrtok</string>
+    <string id="Friday">Piatok</string>
+    <string id="Saturday">Sobota</string>
+    <string id="Sunday">Nedela</string>
+</resources>

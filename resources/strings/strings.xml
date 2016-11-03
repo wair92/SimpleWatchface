@@ -1,0 +1,43 @@
+<strings>
+    <string id="AppName">RussianFlag</string>
+    
+    <string id="steps">steps</string>
+    <string id="Monday">Monday</string>
+    <string id="Tuesday">Tuesday</string>
+    <string id="Wednesday">Wednesday</string>
+    <string id="Thursday">Thursday</string>
+    <string id="Friday">Friday</string>
+    <string id="Saturday">Saturday</string>
+    <string id="Sunday">Sunday</string>
+    
+     <string id="ShowBatteryTitle">Show Battery</string>
+    <string id="Yes">Yes</string>
+    <string id="No">No</string>
+    <string id="LessThan50">Only less than 51 %</string>
+    <string id="LessThan25">Only less than 26 %</string>
+    
+    <string id="DateFormatTitle">Day Format</string>
+    <string id="Date1">DD.MM.YYYY</string>
+    <string id="Date2">MM/DD/YYYY</string>
+    <string id="Date3">YYYY-MM-DD</string>
+    
+    <string id="Field1Title">Field 1</string>
+    <string id="Field2Title">Field 2</string>
+    <string id="Field3Title">Field 3</string>
+    <string id="Field4Title">Field 4</string>
+    <string id="Field5Title">Field 5</string>
+    <string id="Field6Title">Field 6</string>
+    <string id="Field7Title">Field 7</string>
+    <string id="Field8Title">Field 8</string>
+    
+    <string id="None">Nothing :(</string>
+    <string id="Altitude">Altitude</string>
+	<string id="Steps">Steps</string>
+	<string id="BT">Bluetooth</string>
+	<string id="Alarm">Alarm</string>
+	<string id="HR">Heart Rate</string>
+	<string id="Battery">Battery</string>
+	<string id="Date">Date</string>
+	<string id="Day">Day of the week</string>
+	    
+</strings>

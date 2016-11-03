@@ -1,0 +1,111 @@
+<settings>
+
+    <setting propertyKey="@Properties.Field1" title="@Strings.Field1Title">
+        <settingConfig type="list">
+            
+            <listEntry value="99">@Strings.None</listEntry>    
+            <listEntry value="1">@Strings.Altitude</listEntry> 
+            <listEntry value="2">@Strings.Steps</listEntry>                        
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field2" title="@Strings.Field2Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="2">@Strings.Steps</listEntry>   
+            <listEntry value="1">@Strings.Altitude</listEntry> 
+            <listEntry value="8">@Strings.Day</listEntry>  
+            <listEntry value="7">@Strings.Date</listEntry>                         
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field3" title="@Strings.Field3Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="3">@Strings.BT</listEntry>   
+            <listEntry value="4">@Strings.Alarm</listEntry>                          
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field4" title="@Strings.Field4Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="4">@Strings.Alarm</listEntry>   
+            <listEntry value="3">@Strings.BT</listEntry>                          
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field5" title="@Strings.Field5Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="6">@Strings.Battery</listEntry>   
+                                     
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field6" title="@Strings.Field6Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="6">@Strings.Battery</listEntry>   
+                                  
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field7" title="@Strings.Field7Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="2">@Strings.Steps</listEntry>   
+            <listEntry value="1">@Strings.Altitude</listEntry> 
+            <listEntry value="8">@Strings.Day</listEntry>  
+            <listEntry value="7">@Strings.Date</listEntry>    
+                                  
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.Field8" title="@Strings.Field8Title">
+        <settingConfig type="list">
+        
+        	<listEntry value="99">@Strings.None</listEntry>  
+            <listEntry value="2">@Strings.Steps</listEntry>   
+            <listEntry value="1">@Strings.Altitude</listEntry> 
+            <listEntry value="8">@Strings.Day</listEntry>  
+            <listEntry value="7">@Strings.Date</listEntry>     
+                                  
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.ShowwBattery" title="@Strings.ShowBatteryTitle">
+        <settingConfig type="list">
+               
+            <listEntry value="100">@Strings.Yes</listEntry> 
+            <listEntry value="0">@Strings.No</listEntry>
+            <listEntry value="50">@Strings.LessThan50</listEntry>
+            <listEntry value="25">@Strings.LessThan25</listEntry>                       
+			
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
+        <settingConfig type="list">
+               
+            <listEntry value="1">@Strings.Date1</listEntry> 
+            <listEntry value="2">@Strings.Date2</listEntry>
+            <listEntry value="3">@Strings.Date3</listEntry>                      
+			
+        </settingConfig>
+    </setting>
+    
+    
+
+</settings>

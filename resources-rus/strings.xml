@@ -1,0 +1,10 @@
+<resources>
+    <string id="steps">шагов</string>
+    <string id="Monday">Понедельник</string>
+    <string id="Tuesday">Вторник</string>
+    <string id="Wednesday">Среда</string>
+    <string id="Thursday">Четверг</string>
+    <string id="Friday">Пятница</string>
+    <string id="Saturday">Суббота</string>
+    <string id="Sunday">Воскресенье</string>
+</resources>
