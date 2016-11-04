@@ -11,5 +11,6 @@
     <property id="ShowwBattery" type="number">100</property>
     <property id="DateFormat" type="number">1</property>
     <property id="MinuteColor" type="number">1</property>
+    <property id="ShowDelimiter" type="number">1</property>
 
 </properties>

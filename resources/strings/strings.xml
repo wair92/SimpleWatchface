@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">RussianFlag</string>
+    <string id="AppName">Simple Watch Face</string>
     
     <string id="steps">steps</string>
     <string id="Monday">Monday</string>
@@ -40,9 +40,18 @@
 	<string id="Date">Date</string>
 	<string id="Day">Day of the week</string>
     
+    <string id="MinuteColorTitle">Minute Color</string>
     <string id="ColorWhite">White</string>
     <string id="ColorBlack">Black</string>
     <string id="ColorRed">Red</string>
     <string id="ColorGreen">Green</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorPurple">Purple</string>
+    <string id="ColorYellow">Yellow</string>
+      
+    
+    <string id="ShowDelimiterTitle">Show Delimiter</string>
+    <string id="No2">No (Military Format)</string>
 	    
 </strings>
