@@ -29,6 +29,8 @@ class RussianFlagView extends Ui.WatchFace {
 	const X = 0;
 	const Y = 1;
 	
+	const PADDING = 2; // padding between hours and minutes
+	
 	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[192,75],[192,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,180]];
 	
     function initialize() {
@@ -77,6 +79,10 @@ class RussianFlagView extends Ui.WatchFace {
         var steps = Am.getInfo().steps + " " + Ui.loadResource(Rez.Strings.steps);
         var elevation = "-- m";
         var timeTmp = Time.now();
+		
+		var minutes =  Gregorian.info(timeTmp, Time.FORMAT_SHORT).minutes;
+		var hours = Gregorian.info(timeTmp, Time.FORMAT_SHORT).minutes;
+		var delimiter = ":";
         
         var date = "";
         var userDateFormat = App.getApp().getProperty("DateFormat");
@@ -232,7 +238,22 @@ class RussianFlagView extends Ui.WatchFace {
 
         dc.drawBitmap(0, 0, flag);
         dc.setColor(0xFFFFFF, Gfx.COLOR_TRANSPARENT);
-        dc.drawText( SCREEN_MIDDLE, 	62, 	16, 			timeString, 		Gfx.TEXT_JUSTIFY_CENTER );
+        //dc.drawText( SCREEN_MIDDLE, 	62, 	16, 			timeString, 		Gfx.TEXT_JUSTIFY_CENTER );
+		var showDelimiter = true;
+		if(showDelimiter == true)
+		{
+			dc.drawText( SCREEN_MIDDLE, 	62, 	16, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+		}
+		dc.drawText( SCREEN_MIDDLE, 	62-PADDING, 	16, 			hours, 		Gfx.TEXT_JUSTIFY_RIGHT );
+		
+		var userColor = 1;
+		if(userColor == 1)
+		{
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+			dc.drawText( SCREEN_MIDDLE, 	62+PADDING, 	16, 			minutes, 		Gfx.TEXT_JUSTIFY_LEFT );
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		}
+		
         
         // 1. Field
         dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
