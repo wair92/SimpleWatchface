@@ -106,6 +106,16 @@
         </settingConfig>
     </setting>
     
+    <setting propertyKey="@Properties.MinuteColor" title="@Strings.MinuteColorTitle">
+        <settingConfig type="list">
+               
+            <listEntry value="1">@Strings.White</listEntry> 
+            <listEntry value="2">@Strings.Red</listEntry>
+            <listEntry value="3">@Strings.Green</listEntry>                      
+			
+        </settingConfig>
+    </setting>
+    
     
 
 </settings>
