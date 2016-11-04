@@ -10,5 +10,6 @@
     <property id="Field8" type="number">8</property>
     <property id="ShowwBattery" type="number">100</property>
     <property id="DateFormat" type="number">1</property>
+    <property id="MinuteColor" type="number">1</property>
 
 </properties>
