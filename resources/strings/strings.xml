@@ -39,5 +39,10 @@
 	<string id="Battery">Battery</string>
 	<string id="Date">Date</string>
 	<string id="Day">Day of the week</string>
+    
+    <string id="ColorWhite">Black</string>
+    <string id="ColorBlack">Black</string>
+    <string id="ColorRed">Black</string>
+    <string id="ColorGreen">Black</string>
 	    
 </strings>
