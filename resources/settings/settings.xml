@@ -78,8 +78,7 @@
         
         	<listEntry value="99">@Strings.None</listEntry>  
             <listEntry value="2">@Strings.Steps</listEntry>   
-            <listEntry value="1">@Strings.Altitude</listEntry> 
-            <listEntry value="8">@Strings.Day</listEntry>  
+            <listEntry value="1">@Strings.Altitude</listEntry>  
             <listEntry value="7">@Strings.Date</listEntry>     
                                   
         </settingConfig>
@@ -130,5 +129,51 @@
     </setting>
     
     
+        <setting propertyKey="@Properties.ShowSecondTimee" title="@Strings.ShowSecondTimeTitle">
+        <settingConfig type="list">
+               
+            <listEntry value="1">@Strings.Yes</listEntry> 
+            <listEntry value="2">@Strings.No</listEntry>                      
+			
+        </settingConfig>
+    </setting>
+       
+
+ <setting propertyKey="@Properties.TimeZonee" title="@Strings.TimeZoneTitle">
+        <settingConfig type="list">
+               
+            
+            <listEntry value="15">@Strings.p02</listEntry>
+            <listEntry value="16">@Strings.p03</listEntry>
+            <listEntry value="17">@Strings.p04</listEntry>
+            <listEntry value="18">@Strings.p05</listEntry>
+            <listEntry value="19">@Strings.p06</listEntry>
+            <listEntry value="20">@Strings.p07</listEntry>
+            <listEntry value="21">@Strings.p08</listEntry>
+            <listEntry value="22">@Strings.p09</listEntry>
+            <listEntry value="23">@Strings.p10</listEntry>
+            <listEntry value="24">@Strings.p11</listEntry>
+            <listEntry value="25">@Strings.p12</listEntry>  
+            <listEntry value="26">@Strings.p13</listEntry>  
+            <listEntry value="27">@Strings.p14</listEntry>           
+			
+<listEntry value="1">@Strings.m12</listEntry> 
+            <listEntry value="2">@Strings.m11</listEntry>
+            <listEntry value="3">@Strings.m10</listEntry>
+            <listEntry value="4">@Strings.m09</listEntry>
+            <listEntry value="5">@Strings.m08</listEntry>
+            <listEntry value="6">@Strings.m07</listEntry>
+            <listEntry value="7">@Strings.m06</listEntry>
+            <listEntry value="8">@Strings.m05</listEntry>
+            <listEntry value="9">@Strings.m04</listEntry>
+            <listEntry value="10">@Strings.m03</listEntry>
+            <listEntry value="11">@Strings.m02</listEntry>
+            <listEntry value="12">@Strings.m01</listEntry>
+            <listEntry value="13">@Strings.utc</listEntry>
+            <listEntry value="14">@Strings.p01</listEntry>
+
+        </settingConfig>
+    </setting>
+
 
 </settings>

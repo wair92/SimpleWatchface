@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Simple Watch Face</string>
+    <string id="AppName">SimpleWF</string>
     
     <string id="steps">steps</string>
     <string id="Monday">Monday</string>
@@ -49,9 +49,40 @@
     <string id="ColorOrange">Orange</string>
     <string id="ColorPurple">Purple</string>
     <string id="ColorYellow">Yellow</string>
-      
-    
+
     <string id="ShowDelimiterTitle">Show Delimiter</string>
     <string id="No2">No (Military Format)</string>
+    
+     <string id="ShowSecondTimeTitle">Show Second Time (in StepField)</string>
+     <string id="TimeZoneTitle">Set Time Zone</string>
+     
+     <string id="p02">My Time + 02 h</string>
+     <string id="p03">My Time + 03 h</string>
+     <string id="p04">My Time +04h</string>
+     <string id="p05">My Time +05h</string>
+     <string id="p06">My Time +06h</string>
+     <string id="p07">My Time +07h</string>
+     <string id="p08">My Time +08h</string>
+     <string id="p09">My Time +09h</string>
+     <string id="p10">My Time +10h</string>
+     <string id="p11">My Time +11h</string>
+     <string id="p12">My Time +12h</string>
+     <string id="p13">My Time +13h</string>
+     <string id="p14">My Time +14h</string>
+
+  <string id="m12">My Time -12h</string>
+     <string id="m11">My Time -11h</string>
+     <string id="m10">My Time -10h</string>
+     <string id="m09">My Time -9h</string>
+     <string id="m08">My Time -8h</string>
+     <string id="m07">My Time -7h</string>
+     <string id="m06">My Time -6h</string>
+     <string id="m05">My Time -5h</string>
+     <string id="m04">My Time -4h</string>
+     <string id="m03">My Time -3h</string>
+     <string id="m02">My Time -2h</string>
+     <string id="m01">My Time -1h</string>
+     <string id="utc">My Time</string>
+     <string id="p01">My Time +01h</string>
 	    
 </strings>
