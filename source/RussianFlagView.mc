@@ -121,6 +121,7 @@ class RussianFlagView extends Ui.WatchFace {
         var date = "";
         var userDateFormat = secureGet("DateFormat", "number", "1");
         var grInfoTime = Gregorian.info(timeTmp, Time.FORMAT_SHORT);
+		
 
         if(userDateFormat == 1)
         {
@@ -138,6 +139,49 @@ class RussianFlagView extends Ui.WatchFace {
 		        {
 		        	date = grInfoTime.year + "-" +  grInfoTime.month + "-" + grInfoTime.day;
 		        }
+				else
+				{
+					if(userDateFormat == 4)
+					{
+						date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year.toNumber()-2000;
+					}
+					else
+					{
+						if(userDateFormat == 5)
+						{
+							date = grInfoTime.month + "/" +  grInfoTime.day + "/" + grInfoTime.year.toNumber()-2000;
+						}
+						else
+						{
+							if(userDateFormat == 6)
+							{
+								date = grInfoTime.year.toNumber()-2000 + "-" +  grInfoTime.month + "-" + grInfoTime.day;
+							}
+							else
+							{
+								if(userDateFormat == 7)
+								{
+									date = grInfoTime.day + "." + grInfoTime.month;
+								}
+								else
+								{
+									if(userDateFormat == 8)
+									{
+										date = grInfoTime.month + "/" + grInfoTime.day;
+									}
+									else
+									{
+										if(userDateFormat == 9)
+										{
+											date =  grInfoTime.month + "-" + grInfoTime.day;
+										}
+								
+									}
+								}
+							}
+						}
+					}
+				}
 	        }
         }
         var batteryTmp = Sys.getSystemStats().battery.toNumber();
