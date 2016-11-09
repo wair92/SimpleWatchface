@@ -147,36 +147,53 @@
 
  <setting propertyKey="@Properties.TimeZonee" title="@Strings.TimeZoneTitle">
         <settingConfig type="list">
-               
-            
-            <listEntry value="15">@Strings.p02</listEntry>
-            <listEntry value="16">@Strings.p03</listEntry>
-            <listEntry value="17">@Strings.p04</listEntry>
-            <listEntry value="18">@Strings.p05</listEntry>
-            <listEntry value="19">@Strings.p06</listEntry>
-            <listEntry value="20">@Strings.p07</listEntry>
-            <listEntry value="21">@Strings.p08</listEntry>
-            <listEntry value="22">@Strings.p09</listEntry>
-            <listEntry value="23">@Strings.p10</listEntry>
-            <listEntry value="24">@Strings.p11</listEntry>
-            <listEntry value="25">@Strings.p12</listEntry>  
-            <listEntry value="26">@Strings.p13</listEntry>  
-            <listEntry value="27">@Strings.p14</listEntry>           
-			
-<listEntry value="1">@Strings.m12</listEntry> 
-            <listEntry value="2">@Strings.m11</listEntry>
-            <listEntry value="3">@Strings.m10</listEntry>
-            <listEntry value="4">@Strings.m09</listEntry>
-            <listEntry value="5">@Strings.m08</listEntry>
-            <listEntry value="6">@Strings.m07</listEntry>
-            <listEntry value="7">@Strings.m06</listEntry>
-            <listEntry value="8">@Strings.m05</listEntry>
-            <listEntry value="9">@Strings.m04</listEntry>
-            <listEntry value="10">@Strings.m03</listEntry>
-            <listEntry value="11">@Strings.m02</listEntry>
-            <listEntry value="12">@Strings.m01</listEntry>
-            <listEntry value="13">@Strings.utc</listEntry>
-            <listEntry value="14">@Strings.p01</listEntry>
+                
+            <listEntry value="1">@Strings.m23</listEntry> 
+            <listEntry value="2">@Strings.m22</listEntry> 
+            <listEntry value="3">@Strings.m21</listEntry> 
+            <listEntry value="4">@Strings.m19</listEntry> 
+            <listEntry value="5">@Strings.m18</listEntry> 
+            <listEntry value="6">@Strings.m17</listEntry> 
+            <listEntry value="7">@Strings.m16</listEntry> 
+            <listEntry value="8">@Strings.m15</listEntry> 
+            <listEntry value="9">@Strings.m14</listEntry> 
+            <listEntry value="10">@Strings.m13</listEntry> 
+            <listEntry value="11">@Strings.m12</listEntry> 
+            <listEntry value="12">@Strings.m11</listEntry>
+            <listEntry value="13">@Strings.m10</listEntry>
+            <listEntry value="14">@Strings.m09</listEntry>
+            <listEntry value="15">@Strings.m08</listEntry>
+            <listEntry value="16">@Strings.m07</listEntry>
+            <listEntry value="17">@Strings.m06</listEntry>
+            <listEntry value="18">@Strings.m05</listEntry>
+            <listEntry value="19">@Strings.m04</listEntry>
+            <listEntry value="20">@Strings.m03</listEntry>
+            <listEntry value="21">@Strings.m02</listEntry>
+            <listEntry value="22">@Strings.m01</listEntry>
+            <listEntry value="23">@Strings.utc</listEntry>
+            <listEntry value="24">@Strings.p01</listEntry>
+            <listEntry value="25">@Strings.p02</listEntry>
+            <listEntry value="26">@Strings.p03</listEntry>
+            <listEntry value="27">@Strings.p04</listEntry>
+            <listEntry value="28">@Strings.p05</listEntry>
+            <listEntry value="29">@Strings.p06</listEntry>
+            <listEntry value="30">@Strings.p07</listEntry>
+            <listEntry value="31">@Strings.p08</listEntry>
+            <listEntry value="32">@Strings.p09</listEntry>
+            <listEntry value="33">@Strings.p10</listEntry>
+            <listEntry value="34">@Strings.p11</listEntry>
+            <listEntry value="35">@Strings.p12</listEntry>  
+            <listEntry value="36">@Strings.p13</listEntry>  
+            <listEntry value="37">@Strings.p14</listEntry>
+            <listEntry value="38">@Strings.p15</listEntry> 
+            <listEntry value="39">@Strings.p16</listEntry> 
+            <listEntry value="40">@Strings.p17</listEntry> 
+            <listEntry value="41">@Strings.p18</listEntry> 
+            <listEntry value="42">@Strings.p19</listEntry> 
+            <listEntry value="43">@Strings.p20</listEntry> 
+            <listEntry value="44">@Strings.p21</listEntry> 
+            <listEntry value="45">@Strings.p22</listEntry> 
+            <listEntry value="46">@Strings.p23</listEntry> 
 
         </settingConfig>
     </setting>
