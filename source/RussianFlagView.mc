@@ -313,7 +313,14 @@ class RussianFlagView extends Ui.WatchFace {
 		 }
                 
         // DRAWING
-
+		var showLine = secureGet("ShowLine","number",1);
+		if(showLine == 1)
+		{
+			var lineColor = secureGet("LineColor","number",1);
+			dc.setColor(COLORS[lineColor], 0x000000);
+			dc.drawLine(50, 200, 150, 200);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		}
         dc.setColor(0xFFFFFF, 0x000000);
 		var showDelimiter = secureGet("ShowDelimiter", "number", 1);
 
