@@ -110,6 +110,8 @@
      <string id="p22">My Time +22 h</string>
      <string id="p23">My Time +23 h</string>
 
+    <string id="ShowLineTitle">Show Line</string>
+    <string id="LineColorTitle">LineColor</string>
   
 	    
 </strings>
