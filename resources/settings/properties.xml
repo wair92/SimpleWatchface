@@ -11,6 +11,8 @@
     <property id="ShowwBattery" type="number">100</property>
     <property id="DateFormat" type="number">1</property>
     <property id="MinuteColor" type="number">1</property>
+    <property id="ShowLine" type="number">1</property>
+    <property id="LineColor" type="number">1</property>
     <property id="ShowDelimiter" type="number">1</property>
     <property id="ShowSecondTimee" type="number">1</property>
     <property id="TimeZonee" type="number">15</property>
