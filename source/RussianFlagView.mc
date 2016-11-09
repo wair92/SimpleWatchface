@@ -85,7 +85,7 @@ class RussianFlagView extends Ui.WatchFace {
         var timeTmp = Time.now();
         var minutesShift = 0;
         var hoursShift =secureGet("TimeZonee", "number", 5);
-        hoursShift = hoursShift - 13;
+        hoursShift = hoursShift - 24;
         
         
         var hours2 = Gregorian.info(timeTmp,Time.FORMAT_SHORT).hour + hoursShift;
