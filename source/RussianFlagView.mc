@@ -43,7 +43,7 @@ class RussianFlagView extends Ui.WatchFace {
 	
 	var padding = 3; // padding between hours and minutes
 	
-	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[194,75],[194,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,180]];
+	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[199,75],[199,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,180]];
 	const COLORS = [Gfx.COLOR_BLACK,Gfx.COLOR_WHITE, Gfx.COLOR_RED, Gfx.COLOR_GREEN,Gfx.COLOR_BLUE, Gfx.COLOR_ORANGE,Gfx.COLOR_PURPLE,Gfx.COLOR_YELLOW,Gfx.COLOR_WHITE];
     function initialize() {
         WatchFace.initialize();
@@ -196,7 +196,7 @@ class RussianFlagView extends Ui.WatchFace {
         var battery = "";
         if(batteryTmp <= batteryShowLimit)
         {
-        	battery = batteryTmp + " %";
+        	battery = batteryTmp + "%";
         }
         else
         {
