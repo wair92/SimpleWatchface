@@ -20,6 +20,12 @@
     <string id="Date1">DD.MM.YYYY</string>
     <string id="Date2">MM/DD/YYYY</string>
     <string id="Date3">YYYY-MM-DD</string>
+    <string id="Date4">DD.MM.YY</string>
+    <string id="Date5">MM/DD/YY</string>
+    <string id="Date6">YY-MM-DD</string>
+    <string id="Date7">DD.MM</string>
+    <string id="Date8">MM/DD</string>
+    <string id="Date9">MM-DD</string>
     
     <string id="Field1Title">Field 1</string>
     <string id="Field2Title">Field 2</string>
