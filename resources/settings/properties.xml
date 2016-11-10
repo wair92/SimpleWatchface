@@ -9,13 +9,13 @@
     <property id="Field7" type="number">8</property>
     <property id="Field8" type="number">7</property>
     <property id="ShowwBattery" type="number">100</property>
-    <property id="DateFormat" type="number">1</property>
+    <property id="DateFormattt" type="number">1</property>
     <property id="MinuteColor" type="number">1</property>
     <property id="ShowLine" type="number">1</property>
     <property id="LineColor" type="number">1</property>
     <property id="ShowDelimiter" type="number">1</property>
-    <property id="ShowSecondTimee" type="number">1</property>
-    <property id="TimeZonee" type="number">15</property>
+    <property id="ShowSecondTimeee" type="number">1</property>
+    <property id="TimeZoneee" type="number">15</property>
 
 
 </properties>

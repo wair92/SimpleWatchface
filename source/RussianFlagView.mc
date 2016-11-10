@@ -11,14 +11,18 @@ using Toybox.Activity as Act;
 function secureGet(property, type , defaultVal )
 {
 	var data = App.getApp().getProperty(property);
+	//System.println("Property: " + property + " type: "+ type + " defVal: " + defaultVal + " data: " + data);
     if(data == null)
     {
     	data = defaultVal;
+    	//System.println("NULL!");
     }
-    if(type == "number")
+    if(type.equals("number") == true)
     {
-    	data = userDateFormat.toNumber();
+    	//System.println("XXXXXXXXXXXXX");
+    	data = data.toNumber();
     }
+
 	return data;
 }
 class RussianFlagView extends Ui.WatchFace {
@@ -43,7 +47,7 @@ class RussianFlagView extends Ui.WatchFace {
 	
 	var padding = 3; // padding between hours and minutes
 	
-	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[199,75],[199,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,180]];
+	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[199,75],[199,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,178]];
 	const COLORS = [Gfx.COLOR_BLACK,Gfx.COLOR_WHITE, Gfx.COLOR_RED, Gfx.COLOR_GREEN,Gfx.COLOR_BLUE, Gfx.COLOR_ORANGE,Gfx.COLOR_PURPLE,Gfx.COLOR_YELLOW,Gfx.COLOR_WHITE];
     function initialize() {
         WatchFace.initialize();
@@ -84,14 +88,14 @@ class RussianFlagView extends Ui.WatchFace {
         }
         var timeTmp = Time.now();
         var minutesShift = 0;
-        var hoursShift =secureGet("TimeZonee", "number", 5);
+        var hoursShift =secureGet("TimeZoneee", "number", 5);
         hoursShift = hoursShift - 24;
         
         
         var hours2 = Gregorian.info(timeTmp,Time.FORMAT_SHORT).hour + hoursShift;
-        hours2 = hours2.toNumber();
+        hours2 = hours2.toNumber()+24;//to be sure it is positive
         hours2 = hours2%24;
-        Sys.println("Hours: " + hours2);
+        //Sys.println("Hours: " + hours2);
         var minutes2 = minutes + minutesShift;
         hours = hours.format("%02d");
         minutes = minutes.format("%02d");
@@ -100,16 +104,17 @@ class RussianFlagView extends Ui.WatchFace {
         var timeString2 = hours2 + ":" + minutes2; 
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
         
-        var showSecondTime = secureGet("ShowSecondTimee", "number", 1);
+        var showSecondTime = secureGet("ShowSecondTimeee", "number", 1);
+        var amInfo = Am.getInfo();
 
         var steps = "";
         if(showSecondTime == 1)
         {
-        	steps = Am.getInfo().steps;
+        	steps = amInfo.steps;
         }
         else
         {
-        	steps = Am.getInfo().steps + " " + Ui.loadResource(Rez.Strings.steps);
+        	steps = amInfo.steps + " " + Ui.loadResource(Rez.Strings.steps);
         }
         var elevation = "-- m";
         
@@ -119,10 +124,11 @@ class RussianFlagView extends Ui.WatchFace {
 		var delimiter = ":";
         
         var date = "";
-        var userDateFormat = secureGet("DateFormat", "number", "1");
+        var userDateFormat = secureGet("DateFormattt", "number", 1);
+        //System.println("!!!userDateFormat: "+ userDateFormat);
         var grInfoTime = Gregorian.info(timeTmp, Time.FORMAT_SHORT);
 		
-
+		
         if(userDateFormat == 1)
         {
         	date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year;
@@ -143,44 +149,23 @@ class RussianFlagView extends Ui.WatchFace {
 				{
 					if(userDateFormat == 4)
 					{
-						date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year.toNumber()-2000;
+						date = grInfoTime.day + "." + grInfoTime.month;
 					}
 					else
 					{
 						if(userDateFormat == 5)
 						{
-							date = grInfoTime.month + "/" +  grInfoTime.day + "/" + grInfoTime.year.toNumber()-2000;
+							date = grInfoTime.month + "/" + grInfoTime.day;
 						}
 						else
 						{
 							if(userDateFormat == 6)
 							{
-								date = grInfoTime.year.toNumber()-2000 + "-" +  grInfoTime.month + "-" + grInfoTime.day;
-							}
-							else
-							{
-								if(userDateFormat == 7)
-								{
-									date = grInfoTime.day + "." + grInfoTime.month;
-								}
-								else
-								{
-									if(userDateFormat == 8)
-									{
-										date = grInfoTime.month + "/" + grInfoTime.day;
-									}
-									else
-									{
-										if(userDateFormat == 9)
-										{
-											date =  grInfoTime.month + "-" + grInfoTime.day;
-										}
-								
-									}
-								}
+								date =  grInfoTime.month + "-" + grInfoTime.day;
 							}
 						}
 					}
+				
 				}
 	        }
         }
@@ -317,11 +302,12 @@ class RussianFlagView extends Ui.WatchFace {
 		if(showLine == 1)
 		{
 			var lineColor = secureGet("LineColor","number",1);
-			dc.setColor(COLORS[lineColor], 0x000000);
-			dc.drawLine(50, 200, 150, 200);
+			dc.setColor(COLORS[lineColor], Gfx.COLOR_TRANSPARENT);
+			dc.drawLine(30, 150, 188, 150);
+			dc.drawLine(30, 151, 188, 151);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		}
-        dc.setColor(0xFFFFFF, 0x000000);
+        dc.setColor(0xFFFFFF, Gfx.COLOR_TRANSPARENT);
 		var showDelimiter = secureGet("ShowDelimiter", "number", 1);
 
 		if(showDelimiter == 1)
@@ -366,7 +352,7 @@ class RussianFlagView extends Ui.WatchFace {
 	        	{
 					dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
 	        	
-	        		if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+	        		if(amInfo.steps >= amInfo.stepGoal)
 			        {
 			        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 			        }
@@ -376,7 +362,7 @@ class RussianFlagView extends Ui.WatchFace {
 	        	}
 	        	else
 	        	{
-		        	if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+		        	if(amInfo.steps >= amInfo.stepGoal)
 			        {
 			        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 			        }
@@ -406,7 +392,7 @@ class RussianFlagView extends Ui.WatchFace {
         	if(showSecondTime == 1)
         	{
         		dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
-        		if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+        		if(amInfo.steps >= amInfo.stepGoal)
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
@@ -417,7 +403,7 @@ class RussianFlagView extends Ui.WatchFace {
         	}
         	else
         	{
-	        	if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+	        	if(amInfo.steps >= amInfo.stepGoal)
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
@@ -466,7 +452,7 @@ class RussianFlagView extends Ui.WatchFace {
         	{
         		dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
         	
-        		if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+        		if(amInfo.steps >= amInfo.stepGoal)
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
@@ -476,7 +462,7 @@ class RussianFlagView extends Ui.WatchFace {
         	}
         	else
         	{
-	        	if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+	        	if(amInfo.steps >= amInfo.stepGoal)
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
@@ -615,7 +601,7 @@ class RussianFlagView extends Ui.WatchFace {
         
         if( field8 == STEPS)
         {
-        	if(Am.getInfo().steps >= Am.getInfo().stepGoal)
+        	if(amInfo.steps >= amInfo.stepGoal)
 	        {
 	        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 	        }
