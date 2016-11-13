@@ -97,9 +97,9 @@ class RussianFlagView extends Ui.WatchFace {
         hours2 = hours2%24;
         //Sys.println("Hours: " + hours2);
         var minutes2 = minutes + minutesShift;
-        hours = hours.format("%02d");
+        //hours = hours.format("%02d");
         minutes = minutes.format("%02d");
-        hours2 = hours2.format("%02d");
+        //hours2 = hours2.format("%02d");
         minutes2 = minutes2.format("%02d");
         var timeString2 = hours2 + ":" + minutes2; 
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
