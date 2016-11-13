@@ -97,9 +97,9 @@ class RussianFlagView extends Ui.WatchFace {
         hours2 = hours2%24;
         //Sys.println("Hours: " + hours2);
         var minutes2 = minutes + minutesShift;
-        //hours = hours.format("%02d");
+        hours = hours.format("%02d");
         minutes = minutes.format("%02d");
-        //hours2 = hours2.format("%02d");
+        hours2 = hours2.format("%02d");
         minutes2 = minutes2.format("%02d");
         var timeString2 = hours2 + ":" + minutes2; 
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
@@ -346,33 +346,25 @@ class RussianFlagView extends Ui.WatchFace {
         }
         else
         {
-	        if( field1 == STEPS)
+	        if( field1 == BATTERY)
         	{
-        	if(showSecondTime == 1)
-	        	{
-					dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
-	        	
-	        		if(amInfo.steps >= amInfo.stepGoal)
-			        {
-			        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-			        }
-		        	dc.drawText( FIELD_COORDINATES[1][X]-10, FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_RIGHT );
-		        	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-		        	dc.drawText( FIELD_COORDINATES[1][X]+10, FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, timeString2, 			Gfx.TEXT_JUSTIFY_LEFT );
-	        	}
-	        	else
-	        	{
-		        	if(amInfo.steps >= amInfo.stepGoal)
-			        {
-			        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-			        }
-		        	dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_CENTER );
+	        	if(isBatteryLessThanBorder)
+		        {
+		        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+		        }
+		        else
+		        {
 		        	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		        }
+		        dc.drawText( FIELD_COORDINATES[0][X], FIELD_COORDINATES[0][Y], 	Gfx.FONT_MEDIUM, battery, 			Gfx.TEXT_JUSTIFY_CENTER );
+		        
+		        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		    }
+		    else
+		    {
 	        	
-        }
-	        else
-	        {
+
+	       
 	        	if( field1 == NONE)
 		        {
 		        	dc.drawText( FIELD_COORDINATES[0][X], FIELD_COORDINATES[0][Y], 	Gfx.FONT_MEDIUM, "", Gfx.TEXT_JUSTIFY_CENTER );
@@ -450,15 +442,15 @@ class RussianFlagView extends Ui.WatchFace {
         {
         	if(showSecondTime == 1)
         	{
-        		dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
+        		dc.drawText( FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], 	Gfx.FONT_MEDIUM, "||", 			Gfx.TEXT_JUSTIFY_CENTER );
         	
         		if(amInfo.steps >= amInfo.stepGoal)
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
-	        	dc.drawText( FIELD_COORDINATES[1][X]-10, FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_RIGHT );
+	        	dc.drawText( FIELD_COORDINATES[6][X]-10, FIELD_COORDINATES[6][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_RIGHT );
 	        	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-	        	dc.drawText( FIELD_COORDINATES[1][X]+10, FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, timeString2, 			Gfx.TEXT_JUSTIFY_LEFT );
+	        	dc.drawText( FIELD_COORDINATES[6][X]+10, FIELD_COORDINATES[6][Y], 	Gfx.FONT_MEDIUM, timeString2, 			Gfx.TEXT_JUSTIFY_LEFT );
         	}
         	else
         	{
@@ -466,7 +458,7 @@ class RussianFlagView extends Ui.WatchFace {
 		        {
 		        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
-	        	dc.drawText( FIELD_COORDINATES[1][X], FIELD_COORDINATES[1][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_CENTER );
+	        	dc.drawText( FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_CENTER );
 	        	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 	        }
         }
@@ -599,45 +591,34 @@ class RussianFlagView extends Ui.WatchFace {
         
         var field8 = secureGet("Field8", "number", DATE);
         
-        if( field8 == STEPS)
+	  if( field8 == ELEVATION)
         {
-        	if(amInfo.steps >= amInfo.stepGoal)
-	        {
-	        	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-	        }
-        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, steps, 			Gfx.TEXT_JUSTIFY_CENTER );
-        	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, elevation, 			Gfx.TEXT_JUSTIFY_CENTER );
         }
         else
         {
-	        if( field8 == ELEVATION)
+        	if( field8 == WEEKDAY)
 	        {
-	        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, elevation, 			Gfx.TEXT_JUSTIFY_CENTER );
+	        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, weekday, 		Gfx.TEXT_JUSTIFY_CENTER );
 	        }
 	        else
 	        {
-	        	if( field8 == WEEKDAY)
+	        	if( field8 == DATE)
 		        {
-		        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, weekday, 		Gfx.TEXT_JUSTIFY_CENTER );
+		        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, date, 		Gfx.TEXT_JUSTIFY_CENTER );
 		        }
 		        else
 		        {
-		        	if( field8 == DATE)
-			        {
-			        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, date, 		Gfx.TEXT_JUSTIFY_CENTER );
-			        }
-			        else
-			        {
-			        	if( field8 == NONE)
-			        {
-			        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, "", 		Gfx.TEXT_JUSTIFY_CENTER );
-			        }
-			        }
+		        	if( field8 == NONE)
+		        {
+		        	dc.drawText( FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 	Gfx.FONT_MEDIUM, "", 		Gfx.TEXT_JUSTIFY_CENTER );
+		        }
 		        }
 	        }
-	    } 
+        }
+    } 
 
-    }
+    
     
     function onHide() {
     }
