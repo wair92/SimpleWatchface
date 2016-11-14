@@ -84,10 +84,12 @@ class RussianFlagView extends Ui.WatchFace {
         var hours = clockTime.hour;
         
         var minutes = clockTime.min;
+        var showLeadingZero = true;
   
         if (!Sys.getDeviceSettings().is24Hour) {
             if (hours > 12) {
                 hours = hours - 12;
+                showLeadingZero = false;
             }
         }
         var timeTmp = Time.now();
@@ -101,11 +103,22 @@ class RussianFlagView extends Ui.WatchFace {
         var hours2 = Gregorian.info(timeTmp,Time.FORMAT_SHORT).hour + hoursShift;
         hours2 = hours2.toNumber()+24;//to be sure it is positive
         hours2 = hours2%24;
+        if (!Sys.getDeviceSettings().is24Hour) {
+            if (hours2 > 12) {
+                hours2 = hours2 - 12;
+            }
+        }
         //Sys.println("Hours: " + hours2);
         var minutes2 = minutes + minutesShift;
-        hours = hours.format("%02d");
+        if(showLeadingZero == true)
+        {
+        	hours = hours.format("%02d");
+        }
         minutes = minutes.format("%02d");
-        hours2 = hours2.format("%02d");
+        if(showLeadingZero == true)
+        {
+        	hours2 = hours2.format("%02d");
+        }
         minutes2 = minutes2.format("%02d");
         var timeString2 = hours2 + ":" + minutes2; 
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
@@ -346,11 +359,19 @@ class RussianFlagView extends Ui.WatchFace {
 		}
         dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 		var showDelimiter = secureGet("ShowDelimiter", "number", 1);
-
+		var threeMiddle = 15;
 		if(showDelimiter == 1)
 		{
 			padding = 5;
-			dc.drawText( SCREEN_MIDDLE, 	45, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+			if(showLeadingZero == true)
+			{
+				dc.drawText( SCREEN_MIDDLE, 	45, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			else 
+			{
+				dc.drawText( SCREEN_MIDDLE - threeMiddle , 	45, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+				
+			}
 		}
 		else
 		{
@@ -361,8 +382,14 @@ class RussianFlagView extends Ui.WatchFace {
 		}
 		
 		dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
-		dc.drawText( SCREEN_MIDDLE-padding, 45, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
-		
+		if(showLeadingZero == true)
+		{
+			dc.drawText( SCREEN_MIDDLE-padding, 45, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+		}
+		else
+		{
+			dc.drawText( SCREEN_MIDDLE-padding - threeMiddle, 45, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+		}
 		var userColor = secureGet("MinuteColor", "number", 1 );
 		for( var i = 1; i < 9; i++ ) 
 		{
@@ -383,7 +410,14 @@ class RussianFlagView extends Ui.WatchFace {
 				{
 					dc.setColor(COLORS[i], Gfx.COLOR_TRANSPARENT);
 				}
-				dc.drawText( SCREEN_MIDDLE+padding, 45, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+				if(showLeadingZero == true)
+				{
+					dc.drawText( SCREEN_MIDDLE+padding, 45, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+				}
+				else
+				{
+					dc.drawText( SCREEN_MIDDLE+padding - threeMiddle, 45, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+				}
 				dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 				break;
 			}
