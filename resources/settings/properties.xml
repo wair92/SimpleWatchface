@@ -16,6 +16,7 @@
     <property id="ShowDelimiter" type="number">1</property>
     <property id="ShowSecondTimeee" type="number">1</property>
     <property id="TimeZoneee" type="number">15</property>
+    <property id="BckgColor" type="number">1</property>
 
 
 </properties>

@@ -107,6 +107,15 @@
         </settingConfig>
     </setting>
     
+    <setting propertyKey="@Properties.BckgColor" title="@Strings.BckgColorTitle">
+        <settingConfig type="list">
+               
+            <listEntry value="1">@Strings.ColorBlack</listEntry> 
+            <listEntry value="2">@Strings.ColorWhite</listEntry>                      
+			
+        </settingConfig>
+    </setting>
+    
     <setting propertyKey="@Properties.MinuteColor" title="@Strings.MinuteColorTitle">
         <settingConfig type="list">
                
@@ -116,7 +125,8 @@
             <listEntry value="4">@Strings.ColorBlue</listEntry> 
             <listEntry value="5">@Strings.ColorOrange</listEntry> 
             <listEntry value="6">@Strings.ColorPurple</listEntry> 
-            <listEntry value="7">@Strings.ColorYellow</listEntry>                       
+            <listEntry value="7">@Strings.ColorYellow</listEntry>
+            <listEntry value="8">@Strings.ColorBlack</listEntry>                          
 			
         </settingConfig>
     </setting>
@@ -130,6 +140,8 @@
         </settingConfig>
     </setting>
     
+    
+    
     <setting propertyKey="@Properties.LineColor" title="@Strings.LineColorTitle">
         <settingConfig type="list">
                
@@ -139,7 +151,8 @@
             <listEntry value="4">@Strings.ColorBlue</listEntry> 
             <listEntry value="5">@Strings.ColorOrange</listEntry> 
             <listEntry value="6">@Strings.ColorPurple</listEntry> 
-            <listEntry value="7">@Strings.ColorYellow</listEntry>                       
+            <listEntry value="7">@Strings.ColorYellow</listEntry>
+            <listEntry value="8">@Strings.ColorBlack</listEntry>                        
 			
         </settingConfig>
     </setting>
