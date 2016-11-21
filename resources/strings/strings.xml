@@ -111,6 +111,7 @@
     <string id="ShowLineTitle">Show Line</string>
     <string id="LineColorTitle">Line Color</string>
     <string id="BckgColorTitle">Background Color</string>
+    <string id="ampm">a.m./p.m.</string>
   
 	    
 </strings>
