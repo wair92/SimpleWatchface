@@ -2,6 +2,8 @@
     <iq:application entry="RussianFlagApp" id="A840FFDF7B6C428D83F4F10B064DDB12" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="1.2.1" name="@Strings.AppName" type="watchface">
 
         <iq:products>
+            <iq:product id="fenix5"/>
+            <iq:product id="fenix5x"/>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
             <iq:product id="fenixchronos"/>

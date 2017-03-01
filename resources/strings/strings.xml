@@ -2,6 +2,8 @@
     <string id="AppName">SimpleWF</string>
     
     <string id="steps">steps</string>
+    <string id="mm">m</string>
+    <string id="ff">f</string>
     <string id="Monday">Monday</string>
     <string id="Tuesday">Tuesday</string>
     <string id="Wednesday">Wednesday</string>

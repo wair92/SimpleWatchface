@@ -1,5 +1,7 @@
 <resources>
     <string id="steps">шагов</string>
+    <string id="mm">м</string>
+    <string id="ff">ф</string>
     <string id="Monday">Понедельник</string>
     <string id="Tuesday">Вторник</string>
     <string id="Wednesday">Среда</string>

@@ -8,6 +8,7 @@ using Toybox.Time as Time;
 using Toybox.ActivityMonitor as Am;
 using Toybox.Activity as Act;
 
+
 var elevation = "";
 var steps = "";
 var notification = "";
@@ -19,6 +20,8 @@ var weekday = "";
 var amorpm1 = "";
 var amorpm2 = "";
 var amInfo;
+
+const SCREEN_MIDDLE = Sys.getDeviceSettings().screenHeight/2;
 
 var isBatteryLessThanBorder = false;
 var lettersColor =  Gfx.COLOR_WHITE;
@@ -181,7 +184,8 @@ class Field
 	        	aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 	        }
 	        aDc.drawText( x, y, textSize, text, center );
-	        aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+			aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+	        
     	}
     	else
     	{
@@ -197,7 +201,7 @@ class Field
 		        aDc.drawText( x -10 , y, textSize, text, Gfx.TEXT_JUSTIFY_RIGHT );
 	        	aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 				aDc.drawText( x + 10 , y, textSize, $.timeString2, Gfx.TEXT_JUSTIFY_LEFT );        	
-        		aDc.drawText( x + 90 , y+9, textSize-3, $.amorpm2, Gfx.TEXT_JUSTIFY_RIGHT );        	
+        		aDc.drawText( x + SCREEN_MIDDLE*(SCREEN_MIDDLE/109.0) - 19 , y+9, textSize-3, $.amorpm2, Gfx.TEXT_JUSTIFY_RIGHT );        	
         	}	
         	else
         	{
@@ -225,7 +229,7 @@ class RussianFlagView extends Ui.WatchFace {
 	
 	//consts
 	const batteryBorder = 25;
-	const SCREEN_MIDDLE = 109;
+	
 	const ELEVATION = 1;
 	const STEPS = 2;
 	const NOTIFICATION = 3;
@@ -240,44 +244,41 @@ class RussianFlagView extends Ui.WatchFace {
 	const Y = 1;
 	
 	// COLORS
-        var backGround =  Gfx.COLOR_BLACK;
+    var backGround =  Gfx.COLOR_BLACK;
 		
 	
 	var padding = 3; // padding between hours and minutes
 	
-	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[192,75],[192,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,178]];
+	const FIELD_COORDINATES = [[SCREEN_MIDDLE, 10],[SCREEN_MIDDLE, 35],[20,75],[20,115],[SCREEN_MIDDLE+83,75],[SCREEN_MIDDLE+83,115],[SCREEN_MIDDLE,150],[SCREEN_MIDDLE,SCREEN_MIDDLE+69]];
 	const COLORS = [Gfx.COLOR_BLACK,lettersColor, Gfx.COLOR_RED, Gfx.COLOR_GREEN,Gfx.COLOR_BLUE, Gfx.COLOR_ORANGE,Gfx.COLOR_PURPLE,Gfx.COLOR_YELLOW,Gfx.COLOR_BLACK];
-    function initialize() {
+    
+    const TIME_Y = 45*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0);
+    
+    function initialize() 
+    {
         WatchFace.initialize();
-        //flag = Ui.loadResource(Rez.Drawables.Flagg);
-        
     }
 
     // Load your resources here
-    function onLayout(dc) {
+    function onLayout(dc) 
+    {
         setLayout(Rez.Layouts.WatchFace(dc));
     }
-    
 
-    // Called when this View is brought to the foreground. Restore
-    // the state of this View and prepare it to be shown. This includes
-    // loading resources into memory.
-    function onShow() {
+    function onShow() 
+    {
+    
     }
 
-    // Update the view
-    function onUpdate(dc) {
+    function onUpdate(dc) 
+    {
 
         var batteryShowLimit = secureGet("ShowwBattery", "number", 100);
-    	//flags 
-    	
-        
-        // Get the current time and format it correctly
+
         var timeFormat = "$1$:$2$";
-        var clockTime = Sys.getClockTime();
+        var clockTime =  Sys.getClockTime();
         var hours = clockTime.hour;
         
-        //var amorpm1 = "";
         amorpm2 = "";
         
         var minutes = clockTime.min;
@@ -300,8 +301,6 @@ class RussianFlagView extends Ui.WatchFace {
         hoursShift = hoursShift - 24;
         
         
-        
-        
         var hours2 = Gregorian.info(timeTmp,Time.FORMAT_SHORT).hour + hoursShift;
         hours2 = hours2.toNumber()+24;//to be sure it is positive
         hours2 = hours2%24;
@@ -312,7 +311,6 @@ class RussianFlagView extends Ui.WatchFace {
                 hours2 = hours2 - 12;
             }
         }
-        //Sys.println("Hours: " + hours2);
         var minutes2 = minutes + minutesShift;
         if(showLeadingZero == true)
         {
@@ -345,7 +343,6 @@ class RussianFlagView extends Ui.WatchFace {
         showSecondTime = secureGet("ShowSecondTimeee", "number", 1);
         amInfo = Am.getInfo();
 
-        //var steps = "";
         if(showSecondTime == 1)
         {
         	steps = amInfo.steps;
@@ -354,16 +351,10 @@ class RussianFlagView extends Ui.WatchFace {
         {
         	steps = amInfo.steps + " " + Ui.loadResource(Rez.Strings.steps);
         }
-        //var elevation = "-- m";
-        
-		
-		//var minutes =  Gregorian.info(timeTmp, Time.FORMAT_SHORT).minutes;
-		//var hours = Gregorian.info(timeTmp, Time.FORMAT_SHORT).minutes;
+
 		var delimiter = ":";
-        
-        //var date = "";
+
         var userDateFormat = secureGet("DateFormattt", "number", 1);
-        //System.println("!!!userDateFormat: "+ userDateFormat);
         var grInfoTime = Gregorian.info(timeTmp, Time.FORMAT_SHORT);
 		
 		
@@ -416,7 +407,6 @@ class RussianFlagView extends Ui.WatchFace {
         {
         	isBatteryLessThanBorder = false;
         }
-        //var battery = "";
         if(batteryTmp <= batteryShowLimit)
         {
         	battery = batteryTmp + "%";
@@ -426,11 +416,6 @@ class RussianFlagView extends Ui.WatchFace {
         	battery = "";
         }
 
-        
-        //var notification = "";
-		//var bluetooth = "";
-		//var alarm = "";
-		
 		
 		var deviceSettings = Sys.getDeviceSettings();
 		var numberOfAlarms = deviceSettings.alarmCount;
@@ -462,16 +447,9 @@ class RussianFlagView extends Ui.WatchFace {
 				notification = "";
 			}
 		}
-		
-        // Update the view
-        //var view = View.findDrawableById("TimeLabel");
-        //view.setColor(App.getApp().getProperty("ForegroundColor"));
-        //view.setText(timeString);
         
         var bckgColor = secureGet("BckgColor","number",1);
-		
-		
-		
+
 		if(bckgColor == 1)
 		{
 			backGround = Gfx.COLOR_BLACK;
@@ -500,13 +478,13 @@ class RussianFlagView extends Ui.WatchFace {
 		if(deviceSettings.elevationUnits == Sys.UNIT_METRIC)
         {
         	elevation = elevation.toNumber();
-        	elevation = elevation + " m";
+        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.mm);
         	
         }
         if(deviceSettings.elevationUnits == Sys.UNIT_STATUTE)
         {
         	elevation = MyMath.metersToFeet(elevation).toNumber();
-        	elevation = elevation + " f";
+        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.ff);
 
         }
             
@@ -578,8 +556,8 @@ class RussianFlagView extends Ui.WatchFace {
 			{
 				dc.setColor(COLORS[lineColor], Gfx.COLOR_TRANSPARENT);
 			}
-			dc.drawLine(30, 150, 188, 150);
-			dc.drawLine(30, 151, 188, 151);
+			dc.drawLine(SCREEN_MIDDLE - 79, 150, SCREEN_MIDDLE*2 -30, 150);
+			dc.drawLine(SCREEN_MIDDLE - 79, 151, SCREEN_MIDDLE*2 -30, 151);
 			dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 		}
         dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
@@ -590,11 +568,11 @@ class RussianFlagView extends Ui.WatchFace {
 			padding = 5;
 			if(showLeadingZero == true)
 			{
-				dc.drawText( SCREEN_MIDDLE, 	45, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE, 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
 			}
 			else 
 			{
-				dc.drawText( SCREEN_MIDDLE - threeMiddle , 	45, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE - threeMiddle , 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
 				
 			}
 		}
@@ -609,11 +587,11 @@ class RussianFlagView extends Ui.WatchFace {
 		dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 		if(showLeadingZero == true)
 		{
-			dc.drawText( SCREEN_MIDDLE-padding, 45, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+			dc.drawText( SCREEN_MIDDLE-padding, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
 		}
 		else
 		{
-			dc.drawText( SCREEN_MIDDLE-padding - threeMiddle, 45, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+			dc.drawText( SCREEN_MIDDLE-padding - threeMiddle, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
 		}
 		var userColor = secureGet("MinuteColor", "number", 1 );
 		for( var i = 1; i < 9; i++ ) 
@@ -637,17 +615,16 @@ class RussianFlagView extends Ui.WatchFace {
 				}
 				if(showLeadingZero == true)
 				{
-					dc.drawText( SCREEN_MIDDLE+padding, 45, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					dc.drawText( SCREEN_MIDDLE+padding,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
 				}
 				else
 				{
-					dc.drawText( SCREEN_MIDDLE+padding - threeMiddle, 45, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					dc.drawText( SCREEN_MIDDLE+padding - threeMiddle,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
 				}
 				dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 				break;
 			}
 		}
-		//TEST
 		
 		var f1 = new Field(FIELD_COORDINATES[0][X], FIELD_COORDINATES[0][Y], Gfx.FONT_MEDIUM, "Field1",  Gfx.TEXT_JUSTIFY_CENTER );
 		f1.setText();
@@ -682,18 +659,22 @@ class RussianFlagView extends Ui.WatchFace {
 		f8.draw(dc);
 		
 		
-
+		
+		
     } 
 
     
     
-    function onHide() {
+    function onHide() 
+    {
     }
 
-    function onExitSleep() {
+    function onExitSleep() 
+    {
     }
 
-    function onEnterSleep() {
+    function onEnterSleep() 
+    {
     }
 
 }

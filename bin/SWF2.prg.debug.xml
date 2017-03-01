@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="31" pc="268435456" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="33" pc="268435460" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="34" pc="268435488" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="36" pc="268435495" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="38" pc="268435502" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="40" pc="268435524" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="43" pc="268435540" symbol="secureGet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="46" pc="268435544" symbol="ampm"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="48" pc="268435548" symbol="ampm"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="50" pc="268435559" symbol="ampm"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="54" pc="268435568" symbol="ampm"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="60" pc="268435575" symbol="metersToFeet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="62" pc="268435579" symbol="metersToFeet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="63" pc="268435598" symbol="metersToFeet"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="90" pc="268435603" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="92" pc="268435607" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="93" pc="268435617" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="94" pc="268435627" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="95" pc="268435637" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="96" pc="268435647" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="97" pc="268435660" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="100" pc="268435671" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="102" pc="268435675" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="104" pc="268435716" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="105" pc="268435736" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="109" pc="268435755" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="111" pc="268435796" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="112" pc="268435816" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="116" pc="268435835" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="118" pc="268435876" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="119" pc="268435896" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="123" pc="268435915" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="125" pc="268435956" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="126" pc="268435976" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="130" pc="268435995" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="132" pc="268436036" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="133" pc="268436056" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="137" pc="268436075" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="139" pc="268436116" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="140" pc="268436136" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="144" pc="268436155" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="146" pc="268436196" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="147" pc="268436216" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="151" pc="268436235" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="153" pc="268436276" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="154" pc="268436296" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="158" pc="268436315" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="160" pc="268436356" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="161" pc="268436376" symbol="setText"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="173" pc="268436396" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="175" pc="268436400" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="178" pc="268436420" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="180" pc="268436431" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="184" pc="268436470" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="186" pc="268436502" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="187" pc="268436554" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="192" pc="268436589" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="194" pc="268436609" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="196" pc="268436630" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="197" pc="268436679" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="199" pc="268436719" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="201" pc="268436758" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="202" pc="268436820" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="203" pc="268436852" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="204" pc="268436918" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="208" pc="268437023" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="210" pc="268437063" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="212" pc="268437102" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="213" pc="268437154" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="218" pc="268437189" symbol="draw"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="257" pc="268437242" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="259" pc="268437246" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="263" pc="268437265" symbol="onLayout"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="265" pc="268437269" symbol="onLayout"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="268" pc="268437307" symbol="onShow"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="273" pc="268437312" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="276" pc="268437316" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="278" pc="268437344" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="279" pc="268437351" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="280" pc="268437368" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="282" pc="268437378" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="284" pc="268437391" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="285" pc="268437401" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="287" pc="268437405" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="289" pc="268437430" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="290" pc="268437451" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="292" pc="268437462" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="293" pc="268437466" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="298" pc="268437482" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="299" pc="268437499" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="300" pc="268437506" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="301" pc="268437534" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="304" pc="268437544" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="305" pc="268437584" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="306" pc="268437603" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="307" pc="268437613" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="308" pc="268437638" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="309" pc="268437659" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="311" pc="268437670" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="314" pc="268437686" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="315" pc="268437693" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="317" pc="268437701" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="319" pc="268437722" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="321" pc="268437747" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="323" pc="268437769" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="326" pc="268437782" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="327" pc="268437800" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="329" pc="268437808" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="331" pc="268437829" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="333" pc="268437854" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="335" pc="268437876" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="338" pc="268437889" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="340" pc="268437907" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="341" pc="268437926" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="343" pc="268437991" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="344" pc="268438025" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="346" pc="268438048" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="348" pc="268438065" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="352" pc="268438090" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="355" pc="268438154" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="357" pc="268438161" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="358" pc="268438189" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="361" pc="268438220" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="363" pc="268438231" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="367" pc="268438280" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="369" pc="268438291" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="373" pc="268438340" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="375" pc="268438351" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="379" pc="268438400" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="381" pc="268438411" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="385" pc="268438445" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="387" pc="268438456" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="391" pc="268438490" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="393" pc="268438501" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="401" pc="268438535" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="402" pc="268438567" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="404" pc="268438581" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="408" pc="268438594" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="410" pc="268438604" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="412" pc="268438612" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="416" pc="268438631" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="420" pc="268438644" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="421" pc="268438661" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="422" pc="268438671" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="424" pc="268438682" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="428" pc="268438698" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="431" pc="268438714" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="432" pc="268438724" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="435" pc="268438734" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="437" pc="268438745" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="441" pc="268438764" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="443" pc="268438772" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="447" pc="268438788" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="451" pc="268438801" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="453" pc="268438829" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="455" pc="268438840" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="456" pc="268438860" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="458" pc="268438883" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="460" pc="268438894" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="461" pc="268438914" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="463" pc="268438937" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="465" pc="268438948" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="466" pc="268438968" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="470" pc="268438991" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="471" pc="268439023" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="472" pc="268439035" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="475" pc="268439067" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="478" pc="268439096" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="480" pc="268439120" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="481" pc="268439145" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="484" pc="268439206" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="486" pc="268439230" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="487" pc="268439272" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="491" pc="268439333" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="493" pc="268439343" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="495" pc="268439354" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="499" pc="268439400" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="501" pc="268439411" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="505" pc="268439457" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="507" pc="268439468" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="511" pc="268439514" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="513" pc="268439525" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="517" pc="268439571" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="519" pc="268439582" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="523" pc="268439628" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="525" pc="268439639" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="529" pc="268439685" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="538" pc="268439728" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="541" pc="268439756" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="543" pc="268439767" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="544" pc="268439795" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="546" pc="268439818" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="548" pc="268439842" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="550" pc="268439881" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="552" pc="268439905" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="557" pc="268439947" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="559" pc="268439982" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="560" pc="268440038" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="561" pc="268440094" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="563" pc="268440129" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="564" pc="268440161" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="565" pc="268440189" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="566" pc="268440196" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="568" pc="268440207" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="569" pc="268440220" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="571" pc="268440228" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="575" pc="268440278" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="581" pc="268440331" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="583" pc="268440342" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="587" pc="268440358" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="588" pc="268440390" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="590" pc="268440398" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="594" pc="268440457" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="596" pc="268440516" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="597" pc="268440544" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="599" pc="268440562" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="601" pc="268440570" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="603" pc="268440593" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="605" pc="268440617" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="607" pc="268440656" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="609" pc="268440680" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="614" pc="268440722" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="616" pc="268440757" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="618" pc="268440765" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="622" pc="268440824" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="624" pc="268440883" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="625" pc="268440915" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="629" pc="268440934" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="630" pc="268441033" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="631" pc="268441045" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="633" pc="268441059" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="634" pc="268441158" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="635" pc="268441170" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="637" pc="268441184" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="638" pc="268441283" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="639" pc="268441295" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="641" pc="268441309" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="642" pc="268441408" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="643" pc="268441420" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="645" pc="268441434" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="646" pc="268441533" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="647" pc="268441545" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="649" pc="268441559" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="650" pc="268441658" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="651" pc="268441670" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="653" pc="268441684" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="654" pc="268441783" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="655" pc="268441795" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="657" pc="268441809" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="658" pc="268441908" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="659" pc="268441920" symbol="onUpdate"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="668" pc="268441935" symbol="onHide"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="672" pc="268441940" symbol="onExitSleep"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagView.mc" lineNum="676" pc="268441945" symbol="onEnterSleep"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="5" pc="268441950" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="6" pc="268441954" symbol="initialize"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="10" pc="268441973" symbol="onStart"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="14" pc="268441978" symbol="onStop"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="18" pc="268441983" symbol="getInitialView"/>
+<entry filename="C:\\Users\\bo\\workspace\\SWF2\\source\\RussianFlagApp.mc" lineNum="19" pc="268441987" symbol="getInitialView"/>
+<entry filename="Rez" lineNum="122" pc="268442025" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="124" pc="268442029" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="125" pc="268442192" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="126" pc="268442217" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="127" pc="268442269" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="130" pc="268442315" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry field="true" id="11" symbol="none"/>
+<entry field="true" id="143" symbol="ShowBatteryTitle"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389863" object="true" symbol="Field"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="27" object="true" symbol="RussianFlagApp"/>
+<entry field="true" id="129" symbol="Yes"/>
+<entry field="true" id="71" symbol="ColorBlue"/>
+<entry field="true" id="17" symbol="amInfo"/>
+<entry field="true" id="145" symbol="Field7Title"/>
+<entry field="true" id="107" symbol="ShowLineTitle"/>
+<entry field="true" id="39" symbol="DATE"/>
+<entry field="true" id="8388611" symbol="Toybox"/>
+<entry id="8388645" symbol="Time"/>
+<entry field="true" id="18" symbol="SCREEN_MIDDLE"/>
+<entry field="true" id="10" symbol="notification"/>
+<entry field="true" id="84" symbol="TimeZoneTitle"/>
+<entry field="true" id="122" symbol="ColorOrange"/>
+<entry field="true" id="141" symbol="No"/>
+<entry field="true" id="38" symbol="BATTERY"/>
+<entry field="true" id="120" symbol="utc"/>
+<entry id="8388770" module="true" symbol="Strings"/>
+<entry field="true" id="139" symbol="MinuteColorTitle"/>
+<entry field="true" id="138" symbol="ColorGreen"/>
+<entry id="26" object="true" symbol="RussianFlagView"/>
+<entry field="true" id="104" symbol="LessThan50"/>
+<entry id="30" symbol="textSize"/>
+<entry field="true" id="20" symbol="lettersColor"/>
+<entry field="true" id="33" symbol="ELEVATION"/>
+<entry field="true" id="134" symbol="ColorYellow"/>
+<entry field="true" id="59" symbol="LessThan25"/>
+<entry field="true" id="118" symbol="ColorWhite"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry field="true" id="58" symbol="Field2Title"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388640" symbol="Lang"/>
+<entry field="true" id="56" symbol="HR"/>
+<entry id="31" symbol="center"/>
+<entry field="true" id="40" symbol="WEEKDAY"/>
+<entry field="true" id="44" symbol="Flagg"/>
+<entry id="32" symbol="fieldType"/>
+<entry field="true" id="85" symbol="ColorBlack"/>
+<entry id="8388769" module="true" symbol="Rez"/>
+<entry field="true" id="50" symbol="Friday"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="92" symbol="DateFormatTitle"/>
+<entry id="8388924" symbol="Gregorian"/>
+<entry field="true" id="48" symbol="Monday"/>
+<entry field="true" id="79" symbol="BT"/>
+<entry field="true" id="8388724" symbol="battery"/>
+<entry field="true" id="148" symbol="batteryBorder"/>
+<entry field="true" id="57" symbol="ColorRed"/>
+<entry field="true" id="13" symbol="date"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="89" symbol="m23"/>
+<entry field="true" id="87" symbol="m22"/>
+<entry field="true" id="88" symbol="m21"/>
+<entry field="true" id="86" symbol="m20"/>
+<entry field="true" id="82" symbol="m19"/>
+<entry field="true" id="83" symbol="m18"/>
+<entry field="true" id="80" symbol="m17"/>
+<entry field="true" id="81" symbol="m16"/>
+<entry field="true" id="135" symbol="AppName"/>
+<entry field="true" id="76" symbol="m15"/>
+<entry field="true" id="78" symbol="m14"/>
+<entry field="true" id="74" symbol="m13"/>
+<entry field="true" id="75" symbol="m12"/>
+<entry field="true" id="72" symbol="m11"/>
+<entry field="true" id="73" symbol="m10"/>
+<entry field="true" id="68" symbol="m09"/>
+<entry field="true" id="66" symbol="m08"/>
+<entry field="true" id="67" symbol="m07"/>
+<entry field="true" id="64" symbol="m06"/>
+<entry field="true" id="65" symbol="m05"/>
+<entry field="true" id="62" symbol="m04"/>
+<entry field="true" id="63" symbol="m03"/>
+<entry field="true" id="60" symbol="m02"/>
+<entry field="true" id="61" symbol="m01"/>
+<entry field="true" id="146" symbol="Field4Title"/>
+<entry id="8389375" method="true" symbol="WatchFace"/>
+<entry field="true" id="21" symbol="showSecondTime"/>
+<entry id="8388892" symbol="name"/>
+<entry field="true" id="125" symbol="p23"/>
+<entry field="true" id="126" symbol="p22"/>
+<entry field="true" id="123" symbol="p21"/>
+<entry field="true" id="124" symbol="p20"/>
+<entry field="true" id="117" symbol="p19"/>
+<entry field="true" id="114" symbol="p18"/>
+<entry field="true" id="116" symbol="p17"/>
+<entry field="true" id="112" symbol="p16"/>
+<entry field="true" id="113" symbol="p15"/>
+<entry field="true" id="110" symbol="p14"/>
+<entry field="true" id="111" symbol="p13"/>
+<entry field="true" id="106" symbol="p12"/>
+<entry field="true" id="109" symbol="p11"/>
+<entry field="true" id="105" symbol="p10"/>
+<entry field="true" id="51" symbol="Sunday"/>
+<entry field="true" id="99" symbol="p09"/>
+<entry field="true" id="100" symbol="p08"/>
+<entry field="true" id="97" symbol="p07"/>
+<entry field="true" id="98" symbol="p06"/>
+<entry field="true" id="95" symbol="p05"/>
+<entry field="true" id="96" symbol="p04"/>
+<entry field="true" id="93" symbol="p03"/>
+<entry field="true" id="94" symbol="p02"/>
+<entry field="true" id="91" symbol="p01"/>
+<entry field="true" id="70" symbol="BckgColorTitle"/>
+<entry field="true" id="90" symbol="No2"/>
+<entry field="true" id="102" symbol="None"/>
+<entry field="true" id="45" symbol="LauncherIcon"/>
+<entry field="true" id="140" symbol="LineColorTitle"/>
+<entry field="true" id="35" symbol="NOTIFICATION"/>
+<entry field="true" id="150" symbol="padding"/>
+<entry field="true" id="128" symbol="Date6"/>
+<entry field="true" id="133" symbol="Date5"/>
+<entry field="true" id="132" symbol="Date4"/>
+<entry field="true" id="131" symbol="Date3"/>
+<entry field="true" id="130" symbol="Date2"/>
+<entry field="true" id="136" symbol="Date1"/>
+<entry field="true" id="41" symbol="AMPM"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="36" symbol="ALARM"/>
+<entry field="true" id="108" symbol="Field6Title"/>
+<entry id="8389065" symbol="locY"/>
+<entry id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" symbol="Drawables"/>
+<entry field="true" id="52" symbol="Wednesday"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="12" symbol="alarm"/>
+<entry field="true" id="53" symbol="Tuesday"/>
+<entry field="true" id="54" symbol="Saturday"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="9" symbol="elevation"/>
+<entry id="8389348" symbol="font"/>
+<entry field="true" id="55" symbol="Field1Title"/>
+<entry id="8389347" symbol="color"/>
+<entry field="true" id="22" symbol="timeString2"/>
+<entry field="true" id="49" symbol="Thursday"/>
+<entry field="true" id="34" symbol="STEPS"/>
+<entry id="8389846" symbol="type"/>
+<entry field="true" id="14" symbol="weekday"/>
+<entry field="true" id="103" symbol="Day"/>
+<entry field="true" id="153" symbol="TIME_Y"/>
+<entry field="true" id="147" symbol="Altitude"/>
+<entry field="true" id="121" symbol="Field8Title"/>
+<entry id="23" method="true" symbol="secureGet"/>
+<entry field="true" id="24" method="true" symbol="ampm"/>
+<entry id="43" module="true" symbol="Layouts"/>
+<entry field="true" id="8388912" symbol="steps"/>
+<entry field="true" id="144" symbol="Alarm"/>
+<entry field="true" id="142" symbol="Date"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="137" symbol="ShowSecondTimeTitle"/>
+<entry field="true" id="37" symbol="NONE"/>
+<entry field="true" id="19" symbol="isBatteryLessThanBorder"/>
+<entry field="true" id="77" symbol="Field3Title"/>
+<entry field="true" id="115" symbol="Battery"/>
+<entry field="true" id="151" symbol="FIELD_COORDINATES"/>
+<entry id="8389346" symbol="text"/>
+<entry id="154" method="true" symbol="metersToFeet"/>
+<entry field="true" id="46" symbol="mm"/>
+<entry id="8389063" symbol="identifier"/>
+<entry id="8389134" method="true" symbol="setText"/>
+<entry field="true" id="101" symbol="ShowDelimiterTitle"/>
+<entry id="42" module="true" symbol="Menus"/>
+<entry field="true" id="152" symbol="COLORS"/>
+<entry field="true" id="127" symbol="Steps"/>
+<entry field="true" id="16" symbol="amorpm2"/>
+<entry field="true" id="15" symbol="amorpm1"/>
+<entry field="true" id="47" symbol="ff"/>
+<entry field="true" id="149" symbol="backGround"/>
+<entry id="25" object="true" symbol="MyMath"/>
+<entry id="29" symbol="y"/>
+<entry id="28" symbol="x"/>
+<entry id="8388772" module="true" symbol="Fonts"/>
+<entry field="true" id="8389730" symbol="Y"/>
+<entry field="true" id="8389729" symbol="X"/>
+<entry field="true" id="119" symbol="Field5Title"/>
+<entry field="true" id="69" symbol="ColorPurple"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435543" name="data" stackId="4" startPc="268435460"/>
+<entry endPc="268435601" name="feet" stackId="2" startPc="268435579"/>
+<entry endPc="268440126" name="lineColor" stackId="25" startPc="268439767"/>
+<entry endPc="268440934" name="i" stackId="29" startPc="268440562"/>
+<entry endPc="268441934" name="minutes2" stackId="12" startPc="268437316"/>
+<entry endPc="268441934" name="weekdayTmp" stackId="23" startPc="268437316"/>
+<entry endPc="268441934" name="timeFormat" stackId="3" startPc="268437316"/>
+<entry endPc="268441934" name="batteryTmp" stackId="17" startPc="268437316"/>
+<entry endPc="268441934" name="numberOfNotifications" stackId="20" startPc="268437316"/>
+<entry endPc="268441934" name="minutesShift" stackId="9" startPc="268437316"/>
+<entry endPc="268441934" name="showLeadingZero" stackId="7" startPc="268437316"/>
+<entry endPc="268441934" name="timeString" stackId="13" startPc="268437316"/>
+<entry endPc="268441934" name="threeMiddle" stackId="27" startPc="268437316"/>
+<entry endPc="268441934" name="userDateFormat" stackId="15" startPc="268437316"/>
+<entry endPc="268441934" name="f8" stackId="37" startPc="268437316"/>
+<entry endPc="268441934" name="batteryShowLimit" stackId="2" startPc="268437316"/>
+<entry endPc="268441934" name="f7" stackId="36" startPc="268437316"/>
+<entry endPc="268441934" name="clockTime" stackId="4" startPc="268437316"/>
+<entry endPc="268441934" name="f6" stackId="35" startPc="268437316"/>
+<entry endPc="268441934" name="f5" stackId="34" startPc="268437316"/>
+<entry endPc="268441934" name="f4" stackId="33" startPc="268437316"/>
+<entry endPc="268441934" name="f3" stackId="32" startPc="268437316"/>
+<entry endPc="268441934" name="userColor" stackId="28" startPc="268437316"/>
+<entry endPc="268441934" name="f2" stackId="31" startPc="268437316"/>
+<entry endPc="268441934" name="f1" stackId="30" startPc="268437316"/>
+<entry endPc="268441934" name="hoursShift" stackId="10" startPc="268437316"/>
+<entry endPc="268441934" name="numberOfAlarms" stackId="19" startPc="268437316"/>
+<entry endPc="268441934" name="minutes" stackId="6" startPc="268437316"/>
+<entry endPc="268441934" name="bckgColor" stackId="22" startPc="268437316"/>
+<entry endPc="268441934" name="hours" stackId="5" startPc="268437316"/>
+<entry endPc="268441934" name="hours2" stackId="11" startPc="268437316"/>
+<entry endPc="268441934" name="showDelimiter" stackId="26" startPc="268437316"/>
+<entry endPc="268441934" name="timeTmp" stackId="8" startPc="268437316"/>
+<entry endPc="268441934" name="grInfoTime" stackId="16" startPc="268437316"/>
+<entry endPc="268441934" name="phoneIsConnected" stackId="21" startPc="268437316"/>
+<entry endPc="268441934" name="deviceSettings" stackId="18" startPc="268437316"/>
+<entry endPc="268441934" name="delimiter" stackId="14" startPc="268437316"/>
+<entry endPc="268441934" name="showLine" stackId="24" startPc="268437316"/>
+<entry endPc="268442332" name="rez_cmp_local_bitmap_TimeLabel" stackId="2" startPc="268442029"/>
+<entry endPc="268442332" name="rez_cmp_local_bitmap_TimeLabel_fontHeight" stackId="3" startPc="268442029"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry name="secureGet">
+<param id="property"/>
+<param id="type"/>
+<param id="defaultVal"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="ampm">
+<param id="hour24"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="metersToFeet" parent="MyMath">
+<param id="meters"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="Field">
+<param id="aX"/>
+<param id="aY"/>
+<param id="aTextSize"/>
+<param id="aName"/>
+<param id="aCenter"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="setText" parent="Field">
+<documentation/>
+</functionEntry>
+<functionEntry name="draw" parent="Field">
+<param id="aDc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="RussianFlagView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="RussianFlagView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onShow" parent="RussianFlagView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onUpdate" parent="RussianFlagView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onHide" parent="RussianFlagView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onExitSleep" parent="RussianFlagView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onEnterSleep" parent="RussianFlagView">
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="RussianFlagApp">
+<documentation/>
+</functionEntry>
+<functionEntry name="onStart" parent="RussianFlagApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="onStop" parent="RussianFlagApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getInitialView" parent="RussianFlagApp">
+<documentation/>
+</functionEntry>
+<functionEntry name="WatchFace" parent="Layouts">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
+</functionEntry>
+</functions>
+</debugInfo>
