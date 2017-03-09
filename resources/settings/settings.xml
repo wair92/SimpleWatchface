@@ -231,6 +231,15 @@
             <listEntry value="47">@Strings.p23</listEntry> 
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.TimeInText" title="@Strings.ShowTimeInText">
+        <settingConfig type="list">
+               
+            <listEntry value="1">@Strings.Digit</listEntry> 
+            <listEntry value="2">@Strings.Text</listEntry>                      
+			
+        </settingConfig>
+    </setting>
 
 
 </settings>

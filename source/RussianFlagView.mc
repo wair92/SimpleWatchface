@@ -253,6 +253,7 @@ class RussianFlagView extends Ui.WatchFace {
 	const COLORS = [Gfx.COLOR_BLACK,lettersColor, Gfx.COLOR_RED, Gfx.COLOR_GREEN,Gfx.COLOR_BLUE, Gfx.COLOR_ORANGE,Gfx.COLOR_PURPLE,Gfx.COLOR_YELLOW,Gfx.COLOR_BLACK];
     
     const TIME_Y = 45*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0);
+    const TIME_Y_2 = 45*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)*(SCREEN_MIDDLE/109.0)+5;
     
     function initialize() 
     {
@@ -563,69 +564,428 @@ class RussianFlagView extends Ui.WatchFace {
         dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 		var showDelimiter = secureGet("ShowDelimiter", "number", 1);
 		var threeMiddle = 15;
-		if(showDelimiter == 1)
-		{
-			padding = 5;
-			if(showLeadingZero == true)
-			{
-				dc.drawText( SCREEN_MIDDLE, 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
-			}
-			else 
-			{
-				dc.drawText( SCREEN_MIDDLE - threeMiddle , 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
-				
-			}
-		}
-		else
-		{
-			if(showDelimiter == 2)
-			{
-				padding = 0;
-			}
-		}
 		
-		dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
-		if(showLeadingZero == true)
+		var timeInText = secureGet("TimeInText", "number", 1 );
+		
+		var timeSize = 12;
+		if(timeInText == 1)
 		{
-			dc.drawText( SCREEN_MIDDLE-padding, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
-		}
-		else
-		{
-			dc.drawText( SCREEN_MIDDLE-padding - threeMiddle, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
-		}
-		var userColor = secureGet("MinuteColor", "number", 1 );
-		for( var i = 1; i < 9; i++ ) 
-		{
-			if(userColor==i)
+			if(showDelimiter == 1)
 			{
-				if(COLORS[i] == backGround)
-				{
-					if(backGround == Gfx.COLOR_WHITE)
-					{
-						dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-					}
-					if(backGround == Gfx.COLOR_BLACK)
-					{
-						dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-					}
-				}
-				else
-				{
-					dc.setColor(COLORS[i], Gfx.COLOR_TRANSPARENT);
-				}
+				padding = 5;
 				if(showLeadingZero == true)
 				{
-					dc.drawText( SCREEN_MIDDLE+padding,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					dc.drawText( SCREEN_MIDDLE, 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
 				}
-				else
+				else 
 				{
-					dc.drawText( SCREEN_MIDDLE+padding - threeMiddle,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					dc.drawText( SCREEN_MIDDLE - threeMiddle , 	TIME_Y, 	17, 			delimiter, 		Gfx.TEXT_JUSTIFY_CENTER );
+					
 				}
-				dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
-				break;
 			}
+			else
+			{
+				if(showDelimiter == 2)
+				{
+					padding = 0;
+				}
+			}
+			
+			dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+			if(showLeadingZero == true)
+			{
+				dc.drawText( SCREEN_MIDDLE-padding, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+			}
+			else
+			{
+				dc.drawText( SCREEN_MIDDLE-padding - threeMiddle, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
+			}
+			var userColor = secureGet("MinuteColor", "number", 1 );
+			for( var i = 1; i < 9; i++ ) 
+			{
+				if(userColor==i)
+				{
+					if(COLORS[i] == backGround)
+					{
+						if(backGround == Gfx.COLOR_WHITE)
+						{
+							dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+						}
+						if(backGround == Gfx.COLOR_BLACK)
+						{
+							dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+						}
+					}
+					else
+					{
+						dc.setColor(COLORS[i], Gfx.COLOR_TRANSPARENT);
+					}
+					if(showLeadingZero == true)
+					{
+						dc.drawText( SCREEN_MIDDLE+padding,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					}
+					else
+					{
+						dc.drawText( SCREEN_MIDDLE+padding - threeMiddle,  TIME_Y, 17, minutes, Gfx.TEXT_JUSTIFY_LEFT );
+					}
+					dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+					break;
+				}
+			}
+		}	
+		else
+		{
+			hours = hours.toString();
+			if(hours.equals("00"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t0), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("01"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t1), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("02"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t2), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("03"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t3), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("04"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t4), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("05"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t5), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("06"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t6), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("07"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t7), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("08"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t8), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("09"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t9), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("10"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t10), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("11"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t11), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("12"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t12), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("13"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t13), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("14"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1, Ui.loadResource(Rez.Strings.t14), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("15"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t15), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("16"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t16), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("17"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1, Ui.loadResource(Rez.Strings.t17), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("18"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1, Ui.loadResource(Rez.Strings.t18), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("19"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1, Ui.loadResource(Rez.Strings.t19), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("20"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t20), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("21"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1, Ui.loadResource(Rez.Strings.t21), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("22"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t22), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("23"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t23), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(hours.equals("24"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize +1 , Ui.loadResource(Rez.Strings.t24), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			
+			if(minutes.equals("00"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t0), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("01"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t1), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("02"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t2), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("03"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t3), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("04"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t4), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("05"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t5), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("06"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t6), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("07"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t7), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("08"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t8), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("09"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t9), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("10"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t10), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("11"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t11), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("12"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t12), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("13"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t13), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("14"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t14), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("15"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t15), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("16"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize, Ui.loadResource(Rez.Strings.t16), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("17"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t17), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("18"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t18), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			
+			if(minutes.equals("19"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t19), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("20"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t20), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("21"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t21), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("22"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t22), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("23"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t23), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("24"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t24), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("25"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t25), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("26"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t26), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("27"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t27), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("28"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t28), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("29"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t29), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("30"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t30), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("31"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t31), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("32"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t32), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("33"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t33), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("34"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t34), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("35"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t35), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("36"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t36), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("37"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t37), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("38"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t38), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("39"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60 , timeSize, Ui.loadResource(Rez.Strings.t39), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("40"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t40), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("41"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t41), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("42"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50 , timeSize +1, Ui.loadResource(Rez.Strings.t42), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("43"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t43), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("44"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t44), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("45"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t45), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("46"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t46), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("47"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t47), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("48"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t48), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("49"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t49), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("50"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t50), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("51"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t51), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("52"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t52), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("53"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t53), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("54"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t54), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("55"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t55), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("56"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t56), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("57"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t57), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("58"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t58), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("59"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t59), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			if(minutes.equals("60"))
+			{
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t60), 	Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			
+			
+			
 		}
-		
 		var f1 = new Field(FIELD_COORDINATES[0][X], FIELD_COORDINATES[0][Y], Gfx.FONT_MEDIUM, "Field1",  Gfx.TEXT_JUSTIFY_CENTER );
 		f1.setText();
 		f1.draw(dc);
@@ -634,21 +994,29 @@ class RussianFlagView extends Ui.WatchFace {
 		f2.setText();
 		f2.draw(dc);
 		
-		var f3 = new Field(FIELD_COORDINATES[2][X], FIELD_COORDINATES[2][Y], Gfx.FONT_MEDIUM, "Field3", Gfx.TEXT_JUSTIFY_CENTER );
-		f3.setText();
-		f3.draw(dc);
+		if(secureGet("TimeInText", "number", 1 )== 2)
+		{
 		
-		var f4 = new Field(FIELD_COORDINATES[3][X], FIELD_COORDINATES[3][Y], Gfx.FONT_MEDIUM, "Field4",  Gfx.TEXT_JUSTIFY_CENTER );
-		f4.setText();
-		f4.draw(dc);
+		}
+		else
+		{
 		
-		var f5 = new Field(FIELD_COORDINATES[4][X], FIELD_COORDINATES[4][Y], Gfx.FONT_MEDIUM, "Field5",  Gfx.TEXT_JUSTIFY_CENTER );
-		f5.setText();
-		f5.draw(dc);
-		
-		var f6 = new Field(FIELD_COORDINATES[5][X], FIELD_COORDINATES[5][Y], Gfx.FONT_MEDIUM, "Field6",  Gfx.TEXT_JUSTIFY_CENTER );
-		f6.setText();
-		f6.draw(dc);
+			var f3 = new Field(FIELD_COORDINATES[2][X], FIELD_COORDINATES[2][Y], Gfx.FONT_MEDIUM, "Field3", Gfx.TEXT_JUSTIFY_CENTER );
+			f3.setText();
+			f3.draw(dc);
+			
+			var f4 = new Field(FIELD_COORDINATES[3][X], FIELD_COORDINATES[3][Y], Gfx.FONT_MEDIUM, "Field4",  Gfx.TEXT_JUSTIFY_CENTER );
+			f4.setText();
+			f4.draw(dc);
+			
+			var f5 = new Field(FIELD_COORDINATES[4][X], FIELD_COORDINATES[4][Y], Gfx.FONT_MEDIUM, "Field5",  Gfx.TEXT_JUSTIFY_CENTER );
+			f5.setText();
+			f5.draw(dc);
+			
+			var f6 = new Field(FIELD_COORDINATES[5][X], FIELD_COORDINATES[5][Y], Gfx.FONT_MEDIUM, "Field6",  Gfx.TEXT_JUSTIFY_CENTER );
+			f6.setText();
+			f6.draw(dc);
+		}
 		
 		var f7 = new Field(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], Gfx.FONT_MEDIUM, "Field7",  Gfx.TEXT_JUSTIFY_CENTER );
 		f7.setText();
