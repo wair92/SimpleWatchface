@@ -803,20 +803,20 @@ class RussianFlagView extends Ui.WatchFace {
 			}
 			if(minutes.equals("16"))
 			{
-				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize, Ui.loadResource(Rez.Strings.t16), 	Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 50, timeSize+1, Ui.loadResource(Rez.Strings.t16), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
 			if(minutes.equals("17"))
 			{
-				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t17), 	Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize+1, Ui.loadResource(Rez.Strings.t17), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
 			if(minutes.equals("18"))
 			{
-				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t18), 	Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize+1, Ui.loadResource(Rez.Strings.t18), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
 			
 			if(minutes.equals("19"))
 			{
-				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t19), 	Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize+1, Ui.loadResource(Rez.Strings.t19), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
 			if(minutes.equals("20"))
 			{
