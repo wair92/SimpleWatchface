@@ -636,43 +636,44 @@ class RussianFlagView extends Ui.WatchFace {
 		else
 		{
 			hours = hours.toString();
-			if(hours.equals("00"))
+			
+			if(hours.equals("00")||hours.equals("0"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t0), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("01"))
+			if(hours.equals("01")||hours.equals("1"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t1), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("02"))
+			if(hours.equals("02")||hours.equals("2"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t2), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("03"))
+			if(hours.equals("03")||hours.equals("3"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t3), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("04"))
+			if(hours.equals("04")||hours.equals("4"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t4), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("05"))
+			if(hours.equals("05")||hours.equals("5"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t5), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("06"))
+			if(hours.equals("06")||hours.equals("6"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t6), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("07"))
+			if(hours.equals("07")||hours.equals("7"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t7), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("08"))
+			if(hours.equals("08")||hours.equals("8"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t8), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
-			if(hours.equals("09"))
+			if(hours.equals("09")||hours.equals("9"))
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y + 25, timeSize+1, Ui.loadResource(Rez.Strings.t9), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
