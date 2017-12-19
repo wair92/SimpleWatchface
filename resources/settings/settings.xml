@@ -269,6 +269,10 @@
             <listEntry value="9">@Strings.ColorDefault</listEntry> 
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.DonateMe" title="@Strings.DonateMe">
+        <settingConfig type="numeric" />
+    </setting>
 
 
 </settings>
