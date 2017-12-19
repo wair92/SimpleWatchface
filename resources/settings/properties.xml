@@ -18,6 +18,8 @@
     <property id="TimeZoneee" type="number">15</property>
     <property id="BckgColor" type="number">1</property>
     <property id="TimeInText" type="number">1</property>
+    <property id="TimeeeColor20" type="number">9</property>
+    <property id="TimeeeColor100" type="number">9</property>
 
 
 </properties>

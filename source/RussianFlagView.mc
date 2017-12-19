@@ -55,6 +55,8 @@ function ampm(hour24)
 	}
 }
 
+
+
 class MyMath
 {
 	 static function metersToFeet(meters)
@@ -89,12 +91,12 @@ class Field
 	
     function initialize( aX, aY, aTextSize, aName,aCenter ) 
 	{
-    	x = aX;
-    	y = aY;
-    	textSize = aTextSize;
-    	name = aName;
-    	type = "number";
-    	center = aCenter;
+	    	x = aX;
+	    	y = aY;
+	    	textSize = aTextSize;
+	    	name = aName;
+	    	type = "number";
+	    	center = aCenter;
     }
     
     function setText()
@@ -176,15 +178,15 @@ class Field
     	{
     		
     		if(isBatteryLessThanBorder)
-	        {
+	    {
 	        	aDc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-	        }
-	        else
-	        {
-	        	aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
-	        }
-	        aDc.drawText( x, y, textSize, text, center );
-			aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+	    }
+        else
+        {
+        		aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+        }
+        aDc.drawText( x, y, textSize, text, center );
+		aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 	        
     	}
     	else
@@ -196,18 +198,18 @@ class Field
 				aDc.drawText( x, y, textSize, "||", center );        		
 				if($.amInfo.steps >= $.amInfo.stepGoal)
 		        {
-		        	aDc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+		        		aDc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
 		        aDc.drawText( x -10 , y, textSize, text, Gfx.TEXT_JUSTIFY_RIGHT );
-	        	aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+	        		aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
 				aDc.drawText( x + 10 , y, textSize, $.timeString2, Gfx.TEXT_JUSTIFY_LEFT );        	
-        		aDc.drawText( x + SCREEN_MIDDLE*(SCREEN_MIDDLE/109.0) - 19 , y+9, textSize-3, $.amorpm2, Gfx.TEXT_JUSTIFY_RIGHT );        	
+        			aDc.drawText( x + SCREEN_MIDDLE*(SCREEN_MIDDLE/109.0) - 19 , y+9, textSize-3, $.amorpm2, Gfx.TEXT_JUSTIFY_RIGHT );        	
         	}	
         	else
         	{
 	        	if($.amInfo.steps >= $.amInfo.stepGoal)
 		        {
-		        	aDc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+		        		aDc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		        }
 		        aDc.drawText( x, y, textSize, text, center );
 	        	aDc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
@@ -225,7 +227,27 @@ class Field
 class RussianFlagView extends Ui.WatchFace {
 
 
-	//var flag;
+	function setColorAccordingSteps()
+	{
+		var steps20 = secureGet("TimeeeColor20", "number", 9);
+		var steps100 = secureGet("TimeeeColor100", "number", 9);
+		
+		System.println(steps20);
+		System.println(steps100);
+		
+		if($.amInfo.steps >= $.amInfo.stepGoal)
+		{
+			return steps100;
+		}
+		else
+		{
+			if($.amInfo.steps < $.amInfo.stepGoal*0.2 && $.amInfo.steps >= 0)
+			{
+				return steps20;
+			}
+		}
+		return 9;
+	}
 	
 	//consts
 	const batteryBorder = 25;
@@ -243,9 +265,10 @@ class RussianFlagView extends Ui.WatchFace {
 	const X = 0;
 	const Y = 1;
 	
+	
 	// COLORS
     var backGround =  Gfx.COLOR_BLACK;
-		
+	const DEFAULT_COLOR = 9;	
 	
 	var padding = 3; // padding between hours and minutes
 	
@@ -288,12 +311,12 @@ class RussianFlagView extends Ui.WatchFace {
         if (!Sys.getDeviceSettings().is24Hour) 
         {
         	amorpm1 = ampm(hours);
-            if (hours > 12) 
-            {
-            	showLeadingZero = false;
-                hours = hours - 12;
-                
-            }
+        if (hours > 12) 
+        {
+        		showLeadingZero = false;
+            	hours = hours - 12;
+            
+        }
             
         }
         var timeTmp = Time.now();
@@ -307,34 +330,34 @@ class RussianFlagView extends Ui.WatchFace {
         hours2 = hours2%24;
         if (!Sys.getDeviceSettings().is24Hour) {
         	amorpm2 = ampm(hours2);
-            if (hours2 > 12) {
-            	
-                hours2 = hours2 - 12;
-            }
+        if (hours2 > 12) {
+        	
+            hours2 = hours2 - 12;
+        }
         }
         var minutes2 = minutes + minutesShift;
         if(showLeadingZero == true)
         {
-        	hours = hours.format("%02d");
+        		hours = hours.format("%02d");
         }
         if(!Sys.getDeviceSettings().is24Hour)
         {
-        	if(hours.equals("00")== true)
-        	{
-        		hours = 12;
-        	}
+	        	if(hours.equals("00") == true)
+	        	{
+	        		hours = 12;
+	        	}
         }
         minutes = minutes.format("%02d");
         if(showLeadingZero == true)
         {
-        	hours2 = hours2.format("%02d") ;
+        		hours2 = hours2.format("%02d") ;
         }
         if(!Sys.getDeviceSettings().is24Hour)
         {
-        	if(hours2.equals("00") == true)
-        	{
-        		hours2 = 12;
-        	}
+	        	if(hours2.equals("00") == true)
+	        	{
+	        		hours2 = 12;
+	        	}
         }
         minutes2 = minutes2.format("%02d");
         
@@ -346,34 +369,33 @@ class RussianFlagView extends Ui.WatchFace {
 
         if(showSecondTime == 1)
         {
-        	steps = amInfo.steps;
+        		steps = amInfo.steps;
         }
         else
         {
-        	steps = amInfo.steps + " " + Ui.loadResource(Rez.Strings.steps);
+        		steps = amInfo.steps + " " + Ui.loadResource(Rez.Strings.steps);
         }
 
 		var delimiter = ":";
-
         var userDateFormat = secureGet("DateFormattt", "number", 1);
         var grInfoTime = Gregorian.info(timeTmp, Time.FORMAT_SHORT);
 		
 		
         if(userDateFormat == 1)
         {
-        	date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year;
+        		date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year;
         }
         else
         {
         	if(userDateFormat == 2)
 	        {
-	        	date = grInfoTime.month + "/" +  grInfoTime.day + "/" + grInfoTime.year;
+	        		date = grInfoTime.month + "/" +  grInfoTime.day + "/" + grInfoTime.year;
 	        }
 	        else
 	        {
 	        	if(userDateFormat == 3)
 		        {
-		        	date = grInfoTime.year + "-" +  grInfoTime.month + "-" + grInfoTime.day;
+		        		date = grInfoTime.year + "-" +  grInfoTime.month + "-" + grInfoTime.day;
 		        }
 				else
 				{
@@ -402,22 +424,21 @@ class RussianFlagView extends Ui.WatchFace {
         var batteryTmp = Sys.getSystemStats().battery.toNumber();
         if (batteryTmp <= batteryBorder)
         {
-        	isBatteryLessThanBorder = true;
+        		isBatteryLessThanBorder = true;
         }
         else
         {
-        	isBatteryLessThanBorder = false;
+        		isBatteryLessThanBorder = false;
         }
         if(batteryTmp <= batteryShowLimit)
         {
-        	battery = batteryTmp + "%";
+        		battery = batteryTmp + "%";
         }
         else
         {
-        	battery = "";
+        		battery = "";
         }
 
-		
 		var deviceSettings = Sys.getDeviceSettings();
 		var numberOfAlarms = deviceSettings.alarmCount;
 		if(numberOfAlarms == 0)
@@ -478,19 +499,17 @@ class RussianFlagView extends Ui.WatchFace {
 		
 		if(deviceSettings.elevationUnits == Sys.UNIT_METRIC)
         {
-        	elevation = elevation.toNumber();
-        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.mm);
-        	
+	        	elevation = elevation.toNumber();
+	        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.mm);
         }
         if(deviceSettings.elevationUnits == Sys.UNIT_STATUTE)
         {
-        	elevation = MyMath.metersToFeet(elevation).toNumber();
-        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.ff);
-
+	        	elevation = MyMath.metersToFeet(elevation).toNumber();
+	        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.ff);
         }
             
          var weekdayTmp = grInfoTime.day_of_week;
-         //var weekday = "";
+
 		 if(weekdayTmp == 1)
 		 {
 		 	weekday = Ui.loadResource(Rez.Strings.Sunday);
@@ -537,8 +556,6 @@ class RussianFlagView extends Ui.WatchFace {
                 
         // DRAWING
 		var showLine = secureGet("ShowLine","number",1);
-		
-		
 		if(showLine == 1)
 		{
 			var lineColor = secureGet("LineColor","number",1);
@@ -565,8 +582,15 @@ class RussianFlagView extends Ui.WatchFace {
 		var showDelimiter = secureGet("ShowDelimiter", "number", 1);
 		var threeMiddle = 15;
 		
-		var timeInText = secureGet("TimeInText", "number", 1 );
 		
+		var timeColor = setColorAccordingSteps();
+		System.println(timeColor);
+		
+		var timeInText = secureGet("TimeInText", "number", 1 );
+		if(timeColor != DEFAULT_COLOR)
+		{
+			dc.setColor(COLORS[timeColor], Gfx.COLOR_TRANSPARENT);
+		}
 		var timeSize = 12;
 		if(timeInText == 1)
 		{
@@ -592,6 +616,11 @@ class RussianFlagView extends Ui.WatchFace {
 			}
 			
 			dc.setColor(lettersColor, Gfx.COLOR_TRANSPARENT);
+			
+			if(timeColor != DEFAULT_COLOR)
+			{
+				dc.setColor(COLORS[timeColor], Gfx.COLOR_TRANSPARENT);
+			}
 			if(showLeadingZero == true)
 			{
 				dc.drawText( SCREEN_MIDDLE-padding, TIME_Y, 17, hours, 	Gfx.TEXT_JUSTIFY_RIGHT );
@@ -619,6 +648,10 @@ class RussianFlagView extends Ui.WatchFace {
 					else
 					{
 						dc.setColor(COLORS[i], Gfx.COLOR_TRANSPARENT);
+						if(timeColor != DEFAULT_COLOR)
+						{
+							dc.setColor(COLORS[timeColor], Gfx.COLOR_TRANSPARENT);
+						}
 					}
 					if(showLeadingZero == true)
 					{
@@ -635,6 +668,10 @@ class RussianFlagView extends Ui.WatchFace {
 		}	
 		else
 		{
+			if(timeColor != DEFAULT_COLOR)
+			{
+				dc.setColor(COLORS[timeColor], Gfx.COLOR_TRANSPARENT);
+			}
 			hours = hours.toString();
 			
 			if(hours.equals("00")||hours.equals("0"))
@@ -995,7 +1032,7 @@ class RussianFlagView extends Ui.WatchFace {
 		f2.setText();
 		f2.draw(dc);
 		
-		if(secureGet("TimeInText", "number", 1 )== 2)
+		if(secureGet("TimeInText", "number", 1 ) == 2)
 		{
 		
 		}
@@ -1019,13 +1056,24 @@ class RussianFlagView extends Ui.WatchFace {
 			f6.draw(dc);
 		}
 		
-		var f7 = new Field(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], Gfx.FONT_MEDIUM, "Field7",  Gfx.TEXT_JUSTIFY_CENTER );
-		f7.setText();
-		f7.draw(dc);
-		
-		var f8 = new Field(FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], Gfx.FONT_MEDIUM, "Field8",  Gfx.TEXT_JUSTIFY_CENTER );
-		f8.setText();
-		f8.draw(dc);
+		if(!secureGet("DonateMe", "String", 1 ).equals("38425614"))
+		{
+			if(minutes.toNumber()%2 == 0)
+			{
+				dc.drawText(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], 10, "martin.bednar@hotmail.sk" , Gfx.TEXT_JUSTIFY_CENTER );
+				dc.drawText(FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 10, "Donate me :)" , Gfx.TEXT_JUSTIFY_CENTER );
+			}
+		}
+		else
+		{
+			var f7 = new Field(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], Gfx.FONT_MEDIUM, "Field7",  Gfx.TEXT_JUSTIFY_CENTER );
+			f7.setText();
+			f7.draw(dc);
+			
+			var f8 = new Field(FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], Gfx.FONT_MEDIUM, "Field8",  Gfx.TEXT_JUSTIFY_CENTER );
+			f8.setText();
+			f8.draw(dc);
+		}
 		
 		
 		

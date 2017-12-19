@@ -240,6 +240,35 @@
 			
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.TimeeeColor20" title="@Strings.color20">
+        <settingConfig type="list">
+        		<listEntry value="1">@Strings.ColorWhite</listEntry> 
+            <listEntry value="2">@Strings.ColorRed</listEntry>
+            <listEntry value="3">@Strings.ColorGreen</listEntry> 
+            <listEntry value="4">@Strings.ColorBlue</listEntry> 
+            <listEntry value="5">@Strings.ColorOrange</listEntry> 
+            <listEntry value="6">@Strings.ColorPurple</listEntry> 
+            <listEntry value="7">@Strings.ColorYellow</listEntry>
+            <listEntry value="8">@Strings.ColorBlack</listEntry>  
+            <listEntry value="9">@Strings.ColorDefault</listEntry> 
+        </settingConfig>
+    </setting>
+
+    
+    <setting propertyKey="@Properties.TimeeeColor100" title="@Strings.color100">
+        <settingConfig type="list">
+             <listEntry value="1">@Strings.ColorWhite</listEntry> 
+            <listEntry value="2">@Strings.ColorRed</listEntry>
+            <listEntry value="3">@Strings.ColorGreen</listEntry> 
+            <listEntry value="4">@Strings.ColorBlue</listEntry> 
+            <listEntry value="5">@Strings.ColorOrange</listEntry> 
+            <listEntry value="6">@Strings.ColorPurple</listEntry> 
+            <listEntry value="7">@Strings.ColorYellow</listEntry>
+            <listEntry value="8">@Strings.ColorBlack</listEntry>  
+            <listEntry value="9">@Strings.ColorDefault</listEntry> 
+        </settingConfig>
+    </setting>
 
 
 </settings>

@@ -179,6 +179,11 @@
     <string id="t58">Fifty-eight</string>
     <string id="t59">Fifty-nine</string>
     <string id="t60">Sixty</string>
+    
+    <string id="applicationName">SimWATchface</string>
+    <string id="color20">20% step reached (Time color)</string>
+    <string id="color100">100% step reached (Time color)</string>
+    <string id="ColorDefault">Default Color</string>
 
   
 	    
