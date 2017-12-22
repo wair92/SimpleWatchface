@@ -181,10 +181,10 @@
     <string id="t60">Sixty</string>
     
     <string id="applicationName">SimWATchface</string>
-    <string id="color20">20% step reached (Time color)</string>
+    <string id="color20">20% step NOT reached (Time color)</string>
     <string id="color100">100% step reached (Time color)</string>
     <string id="ColorDefault">Default Color</string>
-    <string id="DonateMe">Donation code</string>
+    <string id="DonateMee">Donation code</string>
 
   
 	    

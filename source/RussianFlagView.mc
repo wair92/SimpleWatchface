@@ -1055,8 +1055,8 @@ class RussianFlagView extends Ui.WatchFace {
 			f6.setText();
 			f6.draw(dc);
 		}
-		
-		if(!secureGet("DonateMe", "number", 1 ).equals("38425614"))
+		 
+		if( secureGet("DonateMee", "number", 1 ) != 38425614 )
 		{
 			if(minutes.toNumber()%2 == 0)
 			{

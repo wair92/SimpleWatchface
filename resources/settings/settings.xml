@@ -270,7 +270,7 @@
         </settingConfig>
     </setting>
     
-    <setting propertyKey="@Properties.DonateMe" title="@Strings.DonateMe">
+    <setting propertyKey="@Properties.DonateMee" title="@Strings.DonateMee">
         <settingConfig type="numeric" />
     </setting>
 
