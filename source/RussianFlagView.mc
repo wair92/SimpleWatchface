@@ -1056,12 +1056,22 @@ class RussianFlagView extends Ui.WatchFace {
 			f6.draw(dc);
 		}
 		
-		if(!secureGet("DonateMe", "String", 1 ).equals("38425614"))
+		if(!secureGet("DonateMe", "number", 1 ).equals("38425614"))
 		{
 			if(minutes.toNumber()%2 == 0)
 			{
 				dc.drawText(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], 10, "martin.bednar@hotmail.sk" , Gfx.TEXT_JUSTIFY_CENTER );
 				dc.drawText(FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], 10, "Donate me :)" , Gfx.TEXT_JUSTIFY_CENTER );
+			}
+			else
+			{
+				var f7 = new Field(FIELD_COORDINATES[6][X], FIELD_COORDINATES[6][Y], Gfx.FONT_MEDIUM, "Field7",  Gfx.TEXT_JUSTIFY_CENTER );
+				f7.setText();
+				f7.draw(dc);
+				
+				var f8 = new Field(FIELD_COORDINATES[7][X], FIELD_COORDINATES[7][Y], Gfx.FONT_MEDIUM, "Field8",  Gfx.TEXT_JUSTIFY_CENTER );
+				f8.setText();
+				f8.draw(dc);
 			}
 		}
 		else
