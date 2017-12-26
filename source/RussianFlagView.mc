@@ -8,18 +8,6 @@ using Toybox.Time as Time;
 using Toybox.ActivityMonitor as Am;
 using Toybox.Activity as Act;
 
-var elevation = "";
-var steps = "";
-var notification = "";
-var none = "";
-var alarm = "";
-var battery = "";
-var date = "";
-var weekday = "";
-var amorpm1 = "";
-var amorpm2 = "";
-var amInfo;
-
 var model;
 
 const SCREEN_MIDDLE = Sys.getDeviceSettings().screenHeight/2;
