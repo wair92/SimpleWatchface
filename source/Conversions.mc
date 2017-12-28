@@ -1,6 +1,7 @@
 using Toybox.System as Sys;
 using Toybox.WatchUi as Ui;
 using Toybox.Lang as Lang;
+using Toybox.Math as Math;
 
 class Conversions
 {
@@ -10,7 +11,7 @@ class Conversions
 	{
 		if(deviceSettings.elevationUnits == Sys.UNIT_METRIC)
         {
-	        	elevation = elevation.toNumber();
+	        	elevation = Math.floor(elevation.toNumber());
 	        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.mm);
         }
         if(deviceSettings.elevationUnits == Sys.UNIT_STATUTE)
@@ -42,6 +43,7 @@ class Conversions
 	
 	static function formatUserDate(userDateFormat, grInfoTime)
 	{
+		var date = "";
 		 if(userDateFormat == 1)
         {
         		date = grInfoTime.day + "." +  grInfoTime.month + "." + grInfoTime.year;
@@ -89,7 +91,6 @@ class Conversions
 		var showLeadingZero = true;
 		if (!Sys.getDeviceSettings().is24Hour) 
         {
-	        	amorpm1 = Conversions.ampm(hours);
 	        if (hours > 12) 
 	        {
 	        		showLeadingZero = false;
@@ -117,6 +118,7 @@ class Conversions
 	
 	static function formatSteps(showSecondTime, amInfo)
 	{
+		var steps = "";
 		if(showSecondTime == 1)
         {
         		steps = amInfo.steps; // second time zone will be added 
@@ -478,6 +480,114 @@ class Conversions
 			{
 				dc.drawText( SCREEN_MIDDLE, TIME_Y_2 + 60, timeSize, Ui.loadResource(Rez.Strings.t60), 	Gfx.TEXT_JUSTIFY_CENTER );
 			}
+	}
+	
+	static function formatBattery(batteryTmp, batteryShowLimit)
+	{
+		var isBatteryLessThanBorder = false;
+        var battery = "";
+        var batteryBorder = 25;
+        if (batteryTmp <= batteryBorder)
+        {
+        		isBatteryLessThanBorder = true;
+        }
+        else
+        {
+        		isBatteryLessThanBorder = false;
+        }
+        if(batteryTmp <= batteryShowLimit )
+        {
+        		battery = batteryTmp + "%";
+        }
+        else
+        {
+        		battery = "";
+        }
+        return battery;
+	}
+	
+	static function formatAlarm(numberOfAlarms)
+	{
+		var alarm = "";
+		if(numberOfAlarms == 0)
+		{
+			alarm = "";
+		}
+		else
+		{
+			alarm = numberOfAlarms + "A";
+		}
+		return alarm;
+	}
+	
+	static function formatNotification(phoneIsConnected, numberOfNotifications)
+	{
+		var notification = "";
+		if(numberOfNotifications > 0)
+		{
+			notification = numberOfNotifications + "N";
+		}
+		else
+		{
+			if(phoneIsConnected == true)
+			{
+				notification = "BT";
+			}
+			else
+			{
+				notification = "";
+			}
+		}
+		return notification;
+	}
+	
+	static function formatWeekday(weekdayTmp)
+	{
+		var weekday = "";
+		if(weekdayTmp == 1)
+		 {
+		 	weekday = Ui.loadResource(Rez.Strings.Sunday);
+		 }
+		 else
+		 {
+		 	if(weekdayTmp == 2)
+		 	{
+		 		weekday = Ui.loadResource(Rez.Strings.Monday);
+		 	}
+		 	else
+		 	{
+		 		if(weekdayTmp == 3)
+		 		{
+		 			weekday = Ui.loadResource(Rez.Strings.Tuesday);
+		 		}
+		 		else
+		 		{
+		 			if(weekdayTmp == 4)
+		 			{
+		 				weekday = Ui.loadResource(Rez.Strings.Wednesday);
+		 			}
+		 			else
+		 			{
+		 				if(weekdayTmp == 5)
+			 			{
+			 				weekday = Ui.loadResource(Rez.Strings.Thursday);
+			 			}
+			 			else
+			 			{
+			 				if(weekdayTmp == 6)
+				 			{
+				 				weekday = Ui.loadResource(Rez.Strings.Friday);
+				 			}
+				 			else
+				 			{
+				 				weekday = Ui.loadResource(Rez.Strings.Saturday);
+				 			}
+			 			}
+		 			}
+		 		}
+		 	}
+		 }
+		 return weekday;
 	}
 }
    

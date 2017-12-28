@@ -198,7 +198,6 @@ class RussianFlagView extends Ui.WatchFace {
 	
 	
 	//consts
-	const batteryBorder = 25;
 	
 	const ELEVATION = 1;
 	const STEPS = 2;
@@ -258,62 +257,19 @@ class RussianFlagView extends Ui.WatchFace {
 	    var timeString2 = Conversions.formatTime(hours2, $.model.minutes);
         
 
-		//steps = Conversions.formatSteps($.model.userSettings_.showSecondTime, $.model.amInfo);
-		var steps = "33";
+		var steps = Conversions.formatSteps($.model.userSettings_.showSecondTime, $.model.amInfo);
 
 		var delimiter = ":";
         var grInfoTime = Gregorian.info( Time.now(), Time.FORMAT_SHORT);
 		
-		date = Conversions.formatUserDate($.model.userSettings_.userDateFormat, grInfoTime);
+		var date = Conversions.formatUserDate($.model.userSettings_.userDateFormat, grInfoTime);
+		
+		var battery = Conversions.formatBattery($.model.battery, $.model.userSettings_.batteryShowLimit);
        
-        var batteryTmp = 10;
-        if (batteryTmp <= batteryBorder)
-        {
-        		isBatteryLessThanBorder = true;
-        }
-        else
-        {
-        		isBatteryLessThanBorder = false;
-        }
-        if(batteryTmp <= $.model.userSettings_.batteryShowLimit )
-        {
-        		battery = batteryTmp + "%";
-        }
-        else
-        {
-        		battery = "";
-        }
+        var alarm = Conversions.formatAlarm($.model.numberOfAlarms);
+        
+        var notification = Conversions.formatNotification($.model.phoneConnected, $.model.notificationCount);
 
-		var deviceSettings = Sys.getDeviceSettings();
-		var numberOfAlarms = deviceSettings.alarmCount;
-		if(numberOfAlarms == 0)
-		{
-			alarm = "";
-		}
-		else
-		{
-			alarm = numberOfAlarms + "A";
-		}
-		
-		var numberOfNotifications = deviceSettings.notificationCount;
-		var phoneIsConnected = deviceSettings.phoneConnected;
-
-		
-		if(numberOfNotifications > 0)
-		{
-			notification = numberOfNotifications + "N";
-		}
-		else
-		{
-			if(phoneIsConnected == true)
-			{
-				notification = "BT";
-			}
-			else
-			{
-				notification = "";
-			}
-		}
 
 		if($.model.userSettings_.bckgColor == 1)
 		{
@@ -336,54 +292,10 @@ class RussianFlagView extends Ui.WatchFace {
         dc.clear();
         dc.setColor( lettersColor, Gfx.COLOR_TRANSPARENT );
         
-		elevation = Conversions.formatElevation( model.elevation );
+		var elevation = Conversions.formatElevation( model.elevation );
             
-         var weekdayTmp = grInfoTime.day_of_week;
-
-		 if(weekdayTmp == 1)
-		 {
-		 	weekday = Ui.loadResource(Rez.Strings.Sunday);
-		 }
-		 else
-		 {
-		 	if(weekdayTmp == 2)
-		 	{
-		 		weekday = Ui.loadResource(Rez.Strings.Monday);
-		 	}
-		 	else
-		 	{
-		 		if(weekdayTmp == 3)
-		 		{
-		 			weekday = Ui.loadResource(Rez.Strings.Tuesday);
-		 		}
-		 		else
-		 		{
-		 			if(weekdayTmp == 4)
-		 			{
-		 				weekday = Ui.loadResource(Rez.Strings.Wednesday);
-		 			}
-		 			else
-		 			{
-		 				if(weekdayTmp == 5)
-			 			{
-			 				weekday = Ui.loadResource(Rez.Strings.Thursday);
-			 			}
-			 			else
-			 			{
-			 				if(weekdayTmp == 6)
-				 			{
-				 				weekday = Ui.loadResource(Rez.Strings.Friday);
-				 			}
-				 			else
-				 			{
-				 				weekday = Ui.loadResource(Rez.Strings.Saturday);
-				 			}
-			 			}
-		 			}
-		 		}
-		 	}
-		 }
-                
+		var weekday = Conversions.formatWeekday( grInfoTime.day_of_week );
+   
         // DRAWING
 		if($.model.userSettings_.showLine == 1)
 		{

@@ -20,10 +20,10 @@ class AplicationModel
 	var amInfo = "";
 	var userSettings_;
 	
-	hidden var numberOfNotifications = "";
-	hidden var phoneIsConnected = "";
+	var notificationCount = "";
+	var phoneConnected = "";
 	hidden var deviceSettings;
-	hidden var numberOfAlarms;
+	var numberOfAlarms;
 	hidden var weekDayTmp;
 	var grInfoTime;
 	hidden var clockTime;
@@ -41,8 +41,8 @@ class AplicationModel
 		amInfo = Am.getInfo();
 		steps = amInfo.steps;
 		deviceSettings = Sys.getDeviceSettings();
-		numberOfNotifications = deviceSettings.notificationCount;
-		phoneIsConnected = deviceSettings.phoneConnected;
+		notificationCount = deviceSettings.notificationCount;
+		phoneConnected = deviceSettings.phoneConnected;
 		battery = Sys.getSystemStats().battery.toNumber();
 		deviceSettings = Sys.getDeviceSettings();
 		numberOfAlarms = deviceSettings.alarmCount;
