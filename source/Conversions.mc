@@ -17,6 +17,7 @@ class Conversions
         if(deviceSettings.elevationUnits == Sys.UNIT_STATUTE)
         {
 	        	elevation = MyMath.metersToFeet(elevation).toNumber();
+				elevation = Math.floor(elevation);
 	        	elevation = elevation + " " + Ui.loadResource(Rez.Strings.ff);
         }
         return elevation;
