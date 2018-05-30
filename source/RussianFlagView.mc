@@ -55,7 +55,7 @@ class Field
     {
     	if($.model.userSettings_.secureGet(name, "number", 1) == ELEVATION)
     	{
-    	 	text = $.model.elevation;
+    	 	text = Conversions.formatElevation($.model.elevation);
     	 	fieldType = ELEVATION;
     	}
     	else
@@ -292,7 +292,7 @@ class RussianFlagView extends Ui.WatchFace {
         dc.clear();
         dc.setColor( lettersColor, Gfx.COLOR_TRANSPARENT );
         
-		var elevation = Conversions.formatElevation( model.elevation );
+		var elevation = Conversions.formatElevation( &.model.elevation );
             
 		var weekday = Conversions.formatWeekday( grInfoTime.day_of_week );
    
