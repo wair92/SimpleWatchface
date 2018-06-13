@@ -4,7 +4,7 @@ Simple Watch Face for Garmin Fenix 3
 
 ### Appearance
 
-![Screen](https://services.garmin.com/appsLibraryBusinessServices_v0/rest/apps/b67e87b9-7da8-454a-b236-2db9492526e3/icon/7d5ba4e7-4868-40eb-957a-26f66d3ec07c)
+![Screen](https://services.garmin.com/appsLibraryBusinessServices_v0/rest/apps/aed7b940-69f3-4fdd-be2e-9bb66b38073a/icon/a780e915-d359-47cb-9c93-02e71002316d)
 
 ### Overview ###
 
